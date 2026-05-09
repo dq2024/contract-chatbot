@@ -87,7 +87,10 @@ def route(claude: anthropic.Anthropic, question: str) -> dict:
         import re
         match = re.search(r"```(?:json)?\s*(.*?)```", text, re.DOTALL)
         text = match.group(1).strip() if match else text
-    return json.loads(text)
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        return {"mode": "rag", "sql": None, "reasoning": "Router fallback — defaulting to RAG"}
 
 
 def run_sql(supabase, sql: str) -> list[dict]:
@@ -104,17 +107,21 @@ def run_rag(supabase, embedder, question: str, filter_filenames: list[str] | Non
     return result.data or []
 
 
-def format_answer(claude: anthropic.Anthropic, question: str, context: str) -> str:
+def format_answer(claude: anthropic.Anthropic, question: str, context: str, history: list[dict]) -> str:
+    messages = []
+    for msg in history[-6:]:
+        messages.append({"role": msg["role"], "content": msg["content"]})
+    messages.append({"role": "user", "content": f"Question: {question}\n\nContext:\n{context}"})
     resp = claude.messages.create(
         model="claude-sonnet-4-6",
         max_tokens=1024,
         system=ANSWER_SYSTEM,
-        messages=[{"role": "user", "content": f"Question: {question}\n\nContext:\n{context}"}],
+        messages=messages,
     )
     return resp.content[0].text.strip()
 
 
-def handle_question(question: str, supabase, claude, embedder) -> tuple[str, str | None, str]:
+def handle_question(question: str, supabase, claude, embedder, history: list[dict] | None = None) -> tuple[str, str | None, str]:
     routing = route(claude, question)
     mode = routing.get("mode", "rag")
     sql = routing.get("sql")
@@ -145,7 +152,7 @@ def handle_question(question: str, supabase, claude, embedder) -> tuple[str, str
         )
         context = f"{sql_summary}\n\nRelevant document excerpts:\n{rag_context}"
 
-    answer = format_answer(claude, question, context)
+    answer = format_answer(claude, question, context, history or [])
     return answer, sql, mode
 
 
@@ -203,7 +210,7 @@ def main():
 
         with st.chat_message("assistant"):
             with st.spinner("Thinking..."):
-                answer, sql, mode = handle_question(question, supabase, claude, embedder)
+                answer, sql, mode = handle_question(question, supabase, claude, embedder, st.session_state.messages)
             st.markdown(answer)
             if sql:
                 with st.expander(f"SQL · {mode.upper()}"):

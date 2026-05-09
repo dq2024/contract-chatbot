@@ -1,0 +1,6 @@
+pymupdf4llm
+pymupdf
+anthropic
+supabase
+sentence-transformers
+python-dotenv

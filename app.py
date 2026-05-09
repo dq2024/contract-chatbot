@@ -97,7 +97,7 @@ def run_sql(supabase, sql: str) -> list[dict]:
 
 def run_rag(supabase, embedder, question: str, filter_filenames: list[str] | None = None) -> list[dict]:
     embedding = embedder.encode(question).tolist()
-    params = {"query_embedding": embedding, "query_text": question, "match_count": 15}
+    params = {"query_embedding": embedding, "query_text": question, "match_count": 30}
     if filter_filenames:
         params["filter_filenames"] = filter_filenames
     result = supabase.rpc("match_chunks", params).execute()

@@ -92,7 +92,8 @@ def chunk_document(text: str) -> list[dict]:
         lines = part.split('\n', 1)
         title = lines[0].lstrip('#').strip()
         body  = lines[1].strip() if len(lines) > 1 else ''
-        sections.append((title, body or part))
+        body_with_header = f"## {title}\n\n{body}".strip() if title else (body or part)
+        sections.append((title, body_with_header))
 
     # Accumulate sections into chunks, merging short ones and splitting large ones
     chunks = []

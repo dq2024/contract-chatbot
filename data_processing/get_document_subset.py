@@ -5,7 +5,7 @@
 3. Copies selected PDFs into selected_contracts/ and writes selected_contracts.csv.
 
 Run from project root:
-    python3 data_processing/group_by_prefix.py
+    python3 data_processing/get_document_subset.py
 """
 
 import csv

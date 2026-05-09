@@ -33,9 +33,9 @@ ROUTER_SYSTEM = f"""You are a query router for a Lake County contracts database.
 Given a user question, decide how to answer it and return JSON only — no other text.
 
 Modes:
-- "sql"    — question asks about structured fields (dates, values, vendors, counts, departments)
-- "rag"    — question asks about contract content (clauses, terms, obligations, details in the text)
-- "hybrid" — needs both: first find the right documents via SQL, then search their content
+- "sql"    — answer can be derived entirely from schema columns (dates, values, vendors, counts, departments, flags like auto_renewal_flag, payment_terms, document_type, etc.). Prefer sql whenever a schema column can answer the question.
+- "rag"    — question asks about contract content not captured in any schema column (specific clause language, obligations, liability terms, detailed conditions in the document text)
+- "hybrid" — needs both: first find the right documents via SQL, then search their full text content
 
 Return this JSON format:
 {{

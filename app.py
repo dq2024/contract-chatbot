@@ -52,8 +52,7 @@ Answer the user's question clearly and concisely using only the provided context
 Be specific — include vendor names, dollar amounts, and dates where relevant.
 Format lists as markdown bullet points.
 Always cite which document(s) the information comes from.
-If the context doesn't contain enough information to answer, say so clearly.
-For questions asking about total contract value, you should select the highest most recent number. Do not sum across older documents for the same vendor."""
+If the context doesn't contain enough information to answer, say so clearly."""
 
 
 @st.cache_resource
@@ -177,7 +176,7 @@ def render_dashboard(supabase):
         return
 
     today = pd.Timestamp.today().normalize()
-    horizon = today + pd.DateOffset(months=18)
+    horizon = today + pd.DateOffset(months=12)
 
     # Top-level metrics
     total_docs = len(df)
@@ -195,19 +194,20 @@ def render_dashboard(supabase):
 
     st.divider()
 
-    # Upcoming expirations 
-    st.subheader("Contracts Expiring in the Next 18 Months")
-    expiring = df[(df["expiration_date"] >= today) & (df["expiration_date"] <= horizon)].copy()
+    # Active contracts
+    st.subheader("Active Contracts")
+    active = df[df["expiration_date"].isna() | (df["expiration_date"] >= today)].copy()
 
-    if expiring.empty:
-        st.info("No contracts expiring in the next 18 months.")
+    if active.empty:
+        st.info("No active contracts found.")
     else:
-        expiring["Month"] = expiring["expiration_date"].dt.to_period("M").astype(str)
-        expiring["Status"] = expiring["auto_renewal_flag"].map(
+        active["Month"] = active["expiration_date"].dt.to_period("M").astype(str).where(active["expiration_date"].notna(), "No Expiry")
+        active["Status"] = active["auto_renewal_flag"].map(
             {True: "Auto-Renews", False: "Needs Action"}
         )
         monthly = (
-            expiring.groupby(["Month", "Status"])
+            active[active["expiration_date"].notna()]
+            .groupby(["Month", "Status"])
             .size()
             .reset_index(name="Count")
             .sort_values("Month")
@@ -223,28 +223,30 @@ def render_dashboard(supabase):
         )
         st.plotly_chart(fig, use_container_width=True)
 
-        # For value, use max across the contract family since renewal docs often omit it
         family_max_value = df.groupby("contract_id")["total_contract_value_usd"].max()
-        expiring["family_value"] = expiring["contract_id"].map(family_max_value)
+        active["family_value"] = active["contract_id"].map(family_max_value)
 
-        needs_action = expiring[~expiring["auto_renewal_flag"]][
+        table = active[
             ["vendor_name", "contract_title", "document_type", "expiration_date", "family_value", "internal_department"]
         ].sort_values("expiration_date").copy()
-        needs_action["expiration_date"] = needs_action["expiration_date"].dt.date
-        needs_action["family_value"] = needs_action["family_value"].apply(fmt_usd)
-        needs_action.columns = ["Vendor", "Title", "Type", "Expires", "Value", "Department"]
-        st.caption(f"{len(needs_action)} of {len(expiring)} expiring contracts require active renewal")
-        st.dataframe(needs_action, use_container_width=True, hide_index=True)
+        table["expiration_date"] = table["expiration_date"].dt.date
+        table["family_value"] = table["family_value"].apply(fmt_usd)
+        table.columns = ["Vendor", "Title", "Type", "Expires", "Value", "Department"]
+        st.caption(f"{len(active)} active contracts ({active['auto_renewal_flag'].sum()} auto-renew)")
+        st.dataframe(table, use_container_width=True, hide_index=True)
 
     st.divider()
 
     # Vendor spend  +  Department spend
+    spend_view = st.radio("View", ["Active", "Historical"], horizontal=True, key="spend_view")
+    active_mask = df["expiration_date"].isna() | (df["expiration_date"] >= today)
+    spend_df = df[active_mask] if spend_view == "Active" else df[~active_mask]
+
     col_l, col_r = st.columns(2)
 
     with col_l:
         st.subheader("Top Vendors by Contract Value")
-        # Deduplicate to one value per contract family before summing per vendor
-        per_contract = df.groupby(["contract_id", "vendor_name"])["total_contract_value_usd"].max().reset_index()
+        per_contract = spend_df.groupby(["contract_id", "vendor_name"])["total_contract_value_usd"].max().reset_index()
         vendor_spend = (
             per_contract.groupby("vendor_name")["total_contract_value_usd"]
             .sum()
@@ -264,7 +266,7 @@ def render_dashboard(supabase):
     with col_r:
         st.subheader("Spend by Department")
         dept_spend = (
-            df[df["internal_department"].fillna("").str.strip() != ""]
+            spend_df[spend_df["internal_department"].fillna("").str.strip() != ""]
             .groupby("internal_department")["total_contract_value_usd"]
             .sum()
             .reset_index()
@@ -356,34 +358,37 @@ def main():
     embedder = get_embedder()
 
     with st.sidebar:
-        st.markdown("### Example questions")
-        st.markdown("**Structured**")
-        sql_examples = [
-            "Which contracts have the highest total value?",
-            "Which department has the most contracts?",
-            "List all contracts expiring in 2026.",
-            "Which contracts have hourly rates?",
-            "Show all modifications to contract 22046.",
-        ]
-        for ex in sql_examples:
-            if st.button(ex, key=ex, use_container_width=True):
-                st.session_state["prefill"] = ex
+        st.markdown("### Navigate to")
+        view = st.selectbox("Navigate to", ["💬 Chat", "📊 Dashboard"], label_visibility="collapsed")
+        st.divider()
 
-        st.markdown("**Content**")
-        rag_examples = [
-            "Do any contracts contain indemnification clauses?",
-            "What are the payment terms in the Motorola leases?",
-            "What does contract 23159 say about job order contracting?",
-            "Which contracts have termination for convenience clauses?",
-            "What are the insurance requirements in the Tyler Technologies agreement?",
-        ]
-        for ex in rag_examples:
-            if st.button(ex, key=ex, use_container_width=True):
-                st.session_state["prefill"] = ex
+        if view == "💬 Chat":
+            st.markdown("### Example questions")
+            st.markdown("**Structured**")
+            sql_examples = [
+                "Which contracts have the highest total value?",
+                "Which department has the most contracts?",
+                "List all contracts expiring in 2026.",
+                "Which contracts have hourly rates?",
+                "Show all modifications to contract 22046.",
+            ]
+            for ex in sql_examples:
+                if st.button(ex, key=ex, use_container_width=True):
+                    st.session_state["prefill"] = ex
 
-    tab_chat, tab_dashboard = st.tabs(["💬 Chat", "📊 Dashboard"])
+            st.markdown("**Content**")
+            rag_examples = [
+                "Do any contracts contain indemnification clauses?",
+                "What are the payment terms in the Motorola leases?",
+                "What does contract 23159 say about job order contracting?",
+                "Which contracts have termination for convenience clauses?",
+                "What are the insurance requirements in the Tyler Technologies agreement?",
+            ]
+            for ex in rag_examples:
+                if st.button(ex, key=ex, use_container_width=True):
+                    st.session_state["prefill"] = ex
 
-    with tab_chat:
+    if view == "💬 Chat":
         st.caption("Ask questions about vendors, values, dates, departments, or contract content.")
 
         if "messages" not in st.session_state:
@@ -422,7 +427,7 @@ def main():
             if prefill:
                 st.rerun()
 
-    with tab_dashboard:
+    else:
         render_dashboard(supabase)
 
 

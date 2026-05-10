@@ -71,5 +71,4 @@ logs/
 
 # Streamlit
 .streamlit/secrets.toml
-.devcontainer
 .claude

@@ -1,0 +1,276 @@
+Execution Copy 
+
+## Wireless Communications Site Lease 
+
+THIS WIRELESS COMMUNICATIONS SITE LEASE ("Lease”) is made as of July 1, 2016, by and between Lake County, as lessor (“Lessor”), and Motorola Solutions, inc., a Delaware corporation, as lessee (“Lessee”), 1. PREMISES. Lessor is the owner of the property located at 18 North County St, Waukegan, IL_ 60085 more particularly described on ExhibitA attached hereto and incorporated herein by reference (the “Property”). Lessor hereby leases to Lessee certain portions of the Tower, and a portion of interior space on the ground (collectively, the “Premises”) located on the Property, together with a non-exclusive : easement allowing Lessee, its employees, agents, representative, and assigns access to the Property as provided in Section 4 hereof. The Premises are more particularly described on Exhibit B attached hereto and incorporated herein by reference. Lessee shail have the right to use the Premises for the purpose of installing, removing, replacing, modifying, maintaining, and operating a communications facility including (without limitation) antennae and radios (including microwave antennae and radios); equipment cabinets; backup power sources (including batteries, generators and fuel storage tanks); and other associated equipment, fixtures, wiring, and cabling (collectively the “Communications Equipment” identified in Exhibit B). The parties acknowledge that (a) the Communications Equipment will be owned by Lessee and (b) the Communications Equipment will be used for emergency services, public safety and other governmental purposes, including the Illinois State Police and other Illinois state agencies, and any federal, state, county, municipality or other governmental body, including any department or agency thereof. 2. TERM OF LEASE. The initial term (the “Term’”) of this Lease shall be five (5) years, commencing upon the date stated at the top of this Lease (the “Commencement Date”). Lessee shall have the right to extend the Term for five (5) successive five (5) year terms (the “Renewal Terms”) on the same terms and conditions. This Lease may be extended for each Renewal Term by Lessee if Lessee notifies Lessor of its intention to renew at least thirty (30) days prior to the expiration of the then current term. The information in Exhibit B, including the as-built drawings, shall be updated, as applicable, at Lessee's expense, to depict the then current installation. 3. RENT AND COSTS. Lessee shall pay Lessor Ten Dollars ($10) and other good and valuable consideration as full consideration for the initial Term and all Renewal Terms of this Lease. Unless otherwise specified in this Lease, each party shall bear its own costs. 
+
+4. ACCESS TO COMMUNICATION EQUIPMENT. After the initial installation of the Communication Equipment, Lessor shali permit Lessee unrestricted access to the Property and Premises seven (7) days a week, twenty-four (24) hours a day, three hundred sixty-five (365) days a year, but only Lessee’s employees who the County authorizes to have access in advance shall have such access. 5. INSURANCE. a.) Lessor shall carry Commercial General Liability insurance with respect to the Building during the Lease Term for $1,000,000 per occurrence and $2,000,000 annual aggregate for Bodily Injury, Personal Injury and Property Damage Liability, and shall further carry commercial property insurance and shall insure the Property and the Premises during Term and any Renewal Terms for the full replacement value against loss or damage due to fire and other casualties covered within the classification of fire and extended coverage, vandalism coverage and malicious mischief, sprinkler leakage, water damage and special extended coverage. Additionally, at the option of Lessor, such insurance coverage may include the risks of earthquakes and/or flood damage, terrorist acts and additional hazards, a rental loss endorsement and one or more loss payee endorsements in favor of the holders of any mortgages or deeds of trust encumbering the interest of Lessor in the Building or the ground or underlying lessors of 
+
+## Page 1 of 13 
+
+Execution Copy 
+
+the Property or the Premises, or any portion thereof. Lessor will carry statutory Worker's Compensation and Employer's Liability coverage in an amount of $1,000,000 per accident. The minimum limits of policies of insurance required of Lessor under this Lease shall in no event limit the liability of Lessor under this Lease. b.) Lessee shall maintain the following coverages in the following amounts. Commercial General Liability Insurance covering the insured against claims of bodily injury, personal injury and property damage arising out of Lessee's operations, assumed liabilities or use of the Premises, including Contractual Liability covering the insuring provisions of this Lease and the performance by Lessee of the indemnity agreements set forth in Section 6 of this Lease, for limits of liability not less than $1,000,000 each occurrence and $2,000,000 annual aggregate for Bodily Injury, Personal Injury and Property Damage Liability. 
+
+Physical Damage Insurance covering (i) all furniture, trade fixtures, equipment, merchandise and ail other items of Lessee’s property on the Premises installed by, for, or at the expense of Lessee, (ii) any Lessee improvements, including any improvements which Lessor permits to be installed above the ceiling of the Premises or below the floor of the Premises, and (iii) all other improvements, alterations and additions to the Premises, including any improvements, alterations or additions installed at Lessee’s request above the ceiling of the Premises or below the floor of the Premises. Such insurance shall be written on an All Risk of “physical loss or damage" basis. Lessee shall also carry statutory Workers' compensation insurance and Employer's Liability coverage in an amount of $1,000,000 per accident. The minimum limits of policies of insurance required of Lessee under this Lease shall in no event limit the liability of Lessee under this Lease. Such insurance shall name Lessor as an additional insured (except for Workers' compensation insurance and Employer's Liability coverage) and provide that said insurance shall not be canceled unless thirty (30) days’ prior written notice shall have been given to Lessor, Evidence of Lessee’s insurance hereunder shall be verified by issuance of a Certificate of Insurance to Lessor. 
+
+c.) Subrogation. Lessor and Lessee agree to have their respective insurance companies waive any rights of subrogation that such companies may have against Lessor or Lessee, as the case may be, so long as the insurance carried by Lessor and Lessee, respectively, is not invalidated thereby. 
+
+6. INDEMNIFICATION, Lessee will indemnify and hold Lessor harmiess from any and ail liability, expense, judgment, suit, cause of action, or demand for personal injury, death, or direct damage to tangible property which may accrue against Lessor to the extent it is caused by the negligence of Lessee, its subcontractors, or their employees or agents, while performing their duties under this Lease, if Lessor gives Lessee prompt, written notice of any the claim or suit. Lessor will cooperate with Lessee in its defense or settlement of the claim or suit. This section sets forth the full extent of Lessee’s general indemnification of Lessor from liabilities that are in any way related to Lessee’s performance under this Lease. 
+
+7. MuTUAL WAIVER OF CONSEQUENTIAL DAMAGES AND LIMITATION OF LIABILITY. NOTWTHSTANDING ANYTHING TO THE CONTRARY IN THIS LEASE, EACH PARTY WAIVES THE RIGHT TO RECOVER INCIDENTAL, SPECIAL, CONSEQUENTIAL (INCLUDING LOST PROFITS), PUNITIVE, EXEMPLARY AND SIMILAR DAMAGES, AND EXCEPT FOR PERSONAL INJURY OR DEATH, EACH PARTY'S TOTAL LIABILITY, WHETHER FOR BREACH OF CONTRACT, WARRANTY, NEGLIGENCE, STRICT LIABILITY IN TORT, INDEMNIFICATION OR OTHERWISE, WILL BE LIMITED TO THE DIRECT DAMAGES RECOVERABLE UNDER LAW. This limitation of liability provision survives the expiration of termination of this Lease and applies notwithstanding any contrary provision. 8. NON-INTERFERENCE. The Communications Equipment and the use thereof shall not interfere with the use of any other communication or similar equipment of any kind and nature owned or operated by the Lessor or other tenants or licensees on the Property existing as of the time of the Commencement Date. After the Commencement Date, Lessor agrees not to install or allow installation of new equipment on the Premises if such equipment causes interference with Lessee’s operations. All interference claims shall be settled in accordance with the then prevailing interference rules and regulations promulgated by the 
+
+Page 2 of 13 
+
+Execution Copy FCC. Lessor affirmatively covenants that except for acts of God, neither Lessor nor its employees, agents, representatives, invitees, other tenants or licensees shall cause or allow others to cause interruption of electrical power or interruption of telephone service to the Communication Equipment. Lessor agrees to allow Lessee to conduct intermodulation studies prior to Lessor allowing installation of new equipment on the Premises to determine if such equipment may cause interference with Lessee’s operations. 
+
+## 9, UTILITIES. 
+
+Subject to the next paragraph, which outlines a payment method for the parties’ administrative convenience, Lessee shail pay for all electrical costs of operating its equipment, which shall include, without limitation, the costs of air conditioning the rooms in which the equipment is located, as well as operating the equipment used for dewatering the transmission lines. If feasible, Lessee shall be entitled, at its election, to install any utilities and services required for operating its equipment, and Lessor will provide Lessee such reasonable assistance as is necessary to enable Lessee to arrange for such utilities and services, including signing any easement or other instrument reasonably required by the utility company. Lessor represents that utilities required for Lessee’s use of the Premises are available. 
+
+Unless or until separately measureable utilities and services are installed for the operation of Lessee’s equipment, and for administrative ease, the parties agree that payments to the County can be based ona sample measurement period that the Lessor has conducted, which produced a charge of $5.39/day (93.6 kwHr/day times the Lessor’s current rate for kwHr, which is 0.05759) for operating the Communication Equipment alone (i.e., without air conditioning and dewatering). The Parties agree that this amount shall be doubled to account for the air conditioning and dewatering costs, bringing the daily expense to $10.78, or $3,935.01 annually, plus an additional 7% for taxes and fees, which makes the total annual charge $4,210.46. The Parties agree that the Lessor may invoice this amount to Motorola annually for payment within thirty days, and that for future years, the amount may be adjusted by using the Lessor’s thencurrent rate for electricity. 
+
+After the first year of this Lease, new sample measurement periods may be requested (or performed) once annually by either party, and the party making the request shall pay for all measurement costs. After a new measurement, the amount invoiced to Motorola will be adjusted, prospectively only, based on the results of the most recent measurement period. To further validate the measured costs, the Lessor shall also provide the Lessee with copies of the first year’s utility charges for review. After the first of this lease, new copies of the utility charges may be requested by the Lessee and provided, at no cost, by the Lessor. 
+
+10. IMPROVEMENTS; REMOVAL OF COMMUNICATION EQUIPMENT. Lessee may, at its expense, make such improvements to the Premises as it deems necessary for the operation of the Communication Equipment. Lessor agrees to cooperate with Lessee, at Lessee’s expense, in obtaining any required permits or zoning approvals. The Communication Equipment is and shall remain the property of Lessee; and upon the expiration or earlier termination of this Lease, Lessee shall, at Lessee’s sole cost and expense, remove the Communication Equipment and leave the Premises in its improved condition. To the extent required by jaw, Lessee will ensure that all improvement work completed on behalf or for the use of the Lessee, by Lessee or any of its contractors shall be performed at not less than the prevailing hourly rate pursuant to the Illinois Prevailing Wage Act 820 ILCS 130/ et. seq. If Lessee’s employees will not be performing any work under the Lease to which the Prevailing Wage Schedule applies, Lessee will impose the prevailing wage requirement on all contractors and their subcontractors performing applicable work under the Lease. 11. MAINTENANCE. Lessee shall be solely responsible for maintenance (and, if necessary, replacement) of the Communication Equipment, any uninterruptible power supplies (other than the Lessor’s backup generators), and dehydrator. The Lessee shall be responsible for the maintenance of the air conditioning units, the Lessor shall be responsible for replacement of the air conditioning units if they are deemed 
+
+Page 3 of 13 
+
+Execution Copy 
+
+unrepairable. Lessor shall be responsible for repairing and maintaining all other portions of the Property in safe operating condition, and in compliance with all applicable laws. 
+
+12. HAZARDOUS SUBSTANCES. Lessor represents and warrants that it has no knowledge of any pre-existing environmental contamination on or about the Property or any substance, or chemical, or waste on the Property that is identified in any applicable state, federal, or local law or regulation as being hazardous, toxic, or dangerous. Notwithstanding such, it shall be responsibility of the Lessee under the Due Diligence provision in Section 23 to assess whether the environmental condition of the Property is suitable for the Lessee’s purposes. Lessor shall not introduce or allow any other tenant or licensee to introduce any such substance or chemical or waste onto the Property in violation of applicable law. Lessee shail not introduce any such substance or chemical or waste onto the Property in violation of applicable law. 
+
+13. COMPLIANCE WITH LAWS. Lessor shall comply with all applicable local, state, and federal government laws, codes and regulations, relating to the Property, including without limitation FAA, FCC, NEPA, occupational health and safety, environmental, and electromagnetic (EME) requirements, and applicable requirements of the Americans with Disabilities Act. Lessee shall comply with all applicable local, state, and federal government laws, codes and regulations, relating to the Communications Equipment. 
+
+14. TAXES. Lessor shall pay when due all real estate taxes and other assessments assessed against the Property. 
+
+15, ASSIGNMENT. This Lease shall not be assigned by Lessee except that Lessee may from time to time with notice to and with the approval of Lessor transfer rights and obligations or grant licenses for the Premises to a parent, subsidiary, or other affiliate of Lessee, or to any successor in interest or entity acquiring fifty-one percent (51%) or more of Lessee's stock or assets, or an entity to which Lessee sells, assigns or transfers the Premises or its interest in this Agreement (or portion thereof) in connection with the sale, merger, asset transfer or transfer of a business group or division of Lessee. in the event of such a permitted transfer, this Lease shall continue as a direct lease between Lessor and the permitted transferee, and the original Lessee shall be released from any and all future liability hereunder. Lessor’s approval of Lessee’s assignment under this Section 15 shall not be unreasonably withheld. 
+
+16. WAIVER OF LESSOR’S LIEN RIGHTS. Lessor agrees that it does not have any lien rights in Lessee’s personal property or the Communications Equipment. 
+
+17. TERMINATION PRIOR TO EXPIRATION. This Lease may be terminated without further liability by the non-defaulting party upon forty-five (45) days’ prior written notice to the other party upon a default of any material covenant or term hereof by the other party which is not cured within forty-five (45) days of receipt of written notice of default; or, if such default is not curable within forty-five (45) days, if the defauiting party fails to commence such cure within forty-five (45) days or fails thereafter diligently to prosecute such cure to completion; provided that the cure period for any monetary default shall be thirty (30) days from receipt of notice. This Lease may also be terminated by Lessee on at least forty-five (45) days’ prior written notice to Lessor if (i) Lessee is unable to obtain any requisite permit or authorization or any such permit or authorization is subsequently canceled, withdrawn, terminated, revoked, or not renewed; (ii) Lessee does not obtain from any third party any easement necessary to the installation, access, operation, maintenance, or removal of the Communications Equipment; (iii) any physical equipment or electronic emissions materially interfere with the operation of the Communication Equipment; or (iv) authorization to operate, maintain or integrate the communications network in which the Communications Equipment is a part is superseded or terminated by state or federal authority. This Lease may be terminated by Lessee without further liability upon delivery of written notice to the Lessor if Lessee determines that Lessor did not on the Commencement Date have ownership of the Property or 
+
+## Page 4 of 13 
+
+Execution Copy 
+
+authority to enter into this Lease. If termination of this Lease is due to a default by Lessor, or due to a failure of Lessor's ownership or authority as recited in the preceding sentence of this section, upon termination, Lessor shall return to Lessee any unearned Rent previously delivered to Lessor. Lessee may also terminate this Lease at any time by delivering to Lessor written notice of termination, which shall be effective Sixty (60) days after it is received by Lessor. 
+
+## 18. CASUALTY OR CONDEMNATION. 
+
+a) Casualty. If there is a casualty to the tower or building where the Communications Equipment is located, Lessor shall commence repairs within thirty (30) days and repair or restore the structures within ninety (90) days to the state in which they existed prior to Lessee’s use of them. Any upgrades that needed to be implemented under this Lease, and which require repair due to casualty, shall be the responsibility of Lessee. All rental payments shall abate during the period when Lessor’s structures are not useable. Lessee may immediately erect on an unused portion of the Property, a temporary communications facility, while Lessor makes repairs, which temporary facility shall be removed by the Lessee after completion of the repairs. In the event such repairs or restoration are not commenced within thirty (30) days or completed within ninety (90) days, Lessee may elect to terminate this Lease by so notifying Lessor in writing, in which event any prepaid fees shall promptly be refunded to Lessee. The erection and removal of the temporary facility shall be exclusively at the expense of the Lessee, and other than the refunding of the prepaid fees, the Lessor shall not be obligated to the Lessee for any other damages for Lessee’s termination of the Lease because of Lessor’s failure to timely commence or complete repairs to the tower or building. 
+
+b) Condemnation. If there is a condemnation of the Premises, then this Lease will terminate upon transfer of title to the condemning authority, without further liability to either party except for Lessor’s obligation to reimburse Lessee for any prepaid fees. Lessee is entitled to pursue a separate condemnation award from the condemning authority. Lessor shall notify Lessee in writing within ten (10) days after it receives notice of any actual or contemplated condemnation proceedings. 
+
+19. NOTICES. Any notice or demand required to be given herein shall be made by reliable overnight courier to the address of the respective parties set forth below and shall be deemed given on the date delivery is received or refused, as follows: 
+
+To Lessee, notices shall be sent to: 
+
+Motorola Solutions, Inc. Attention: Lisa Wilkins 1301 E. Algonquin Road Room 0437 Schaumburg, IL 60196 
+
+## and 
+
+Motorola Solutions, Inc. Global Reai Estate Counsel Legal and Government Affairs 1301 E. Algonquin Road, 5" Floor Schaumburg, iL 60196 
+
+Page 5 of 13 
+
+Execution Copy 
+
+To Lessor, notices shall be sent to: 
+
+RuthAnne Hail Purchasing Manager Lake County 18 North County Street. Waukegan, IL 60084 
+
+Either party may change its address by giving the other notice of a new address in accordance with the terms of this section. All payments to Lessor required hereunder shall be sent to the address specified for Lessor above. 20. TITLE AND QUIET ENJOYMENT. Lessor represents, warrants and agrees (i) that Lessor is the owner in fee of the Property and Premises; (ii) that the person signing this Lease has the authority to execute it on behalf of Lessor; (iii) that Lessee shall have access to and quiet enjoyment of the Property and Premises at all times throughout the initial Term of this Lease and any Renewal Term, so long as Lessee is not in default beyond the expiration of any applicable cure period; (iv) that the Property: (a) abuts a public right-of-way over which practical access is possible, or (b) is accessible over easements appurtenant to such site; and (v) that Lessor’s making of this Lease and the performance thereof will not violate any zoning or other laws, ordinances, restrictive covenants or the provision of any mortgage, lease or other agreements under which Lessor is bound and which restricts itself in any way with respect to the use or disposition of the Property. 
+
+21. RECORDATION. Neither this Lease, nor any memorandum or other summary version thereof, shall be recorded. 
+
+22. IDENTIFICATION OF PARTIES. References to Lessee herein shall include Lessee’s transferee’s, successors, and assigns. References to Lessor herein shall include Lessor’s transferee’s, successors, and assigns. 
+
+## 23. PROVISION OMITTED. 
+
+24. DISPUTE RESOLUTION. Lessor and Lessee shall attempt to settle any claim or controversy arising out of this Lease (except for a claim relating to intellectual property or breach of confidentiality) through consultation and negotiation in the spirit of mutual friendship and cooperation. This provision shall not be construed to affect adversely the rights of either party under the doctrines of laches, waiver or estoppel. Nothing in this section shall prevent either party from resorting to judicial proceedings if: (A) good faith efforts to resolve a dispute under these procedures have been unsuccessful; or (B) interim resort to a court is necessary to prevent serious and irreparable injury to a party or to others. 
+
+25. CONFIDENTIALITY. During the term of this Lease, the parties may provide each other with Confidential Information. Subject to the requirements of Illinois Open Meetings Act, 5 ILCS 120/1 ef seq., the Illinois Freedom of Information Act, 5 ILCS 140/1 ef seq., and the Illinois Local Records Act, 50 ILCS 205/1, et seq., each Party will: maintain the confidentiality of the other Party's Confidential Information (as defined below) and not disclose it to any third party, except as authorized by the disclosing Party in writing or as required by a court of competent jurisdiction; restrict disclosure of the Confidential Information to its employees who have a "need to know’ and not copy or reproduce the Confidential Information; take necessary and appropriate precautions to guard the confidentiality of the Confidential information, including informing its employees who handle the Confidential Information that it is confidential and is not to be disclosed to others, but these precautions will be at least the same degree of care that the receiving Party applies to its own confidential information and will not be less than 
+
+Page 6 of 13 
+
+Execution Copy 
+
+; 
+
+reasonable care; and use the Confidential Information only in furtherance of the performance of this Lease. Confidential information is and will at ail times remain the property of the disclosing Party, and no grant of any proprietary rights in the Confidential Information is given or intended, including any express or implied license, other than the limited right of the recipient to use the Confidential Information in the manner and to the extent permitted by this Lease. For purposes of this Lease, “Confidential Information” means any information that is disclosed in written, graphic, verbal, or machine-recognizable form, and is marked, designated, or identified at the time of disclosure as being confidential or its equivalent; or if the information is in verbal form, it is identified as confidential at the time of disclosure and is confirmed in writing within thirty (30} days of the disclosure. Confidential Information does not include any information that: is or becomes publicly known through no wrongful act of the receiving Party; is already known to the receiving Party without restriction when it is disclosed; is or becomes, rightfully and without breach of this Lease, in the receiving Party's possession without any obligation restricting disclosure; is independently developed by the receiving Party without breach of this Lease; or is explicitly approved for release by written authorization of the disclosing Party. This Lease and all of its terms shall be deemed Confidential information, except Lessee may give a copy of this Lease to the State of Illinois, the Illinois State Police and any federal, state, county, municipality or other governmental body, including any department or agency thereof. This confidentiality provision survives the expiration or termination of this Lease. 
+
+26. SEVERABILITY. If any one or more of the provisions of this Lease shall be held by court of competent jurisdiction in a final judicial action to be void, voidable, or unenforceable, such provision(s) shall be deemed severable from the remaining provisions of this Lease and shall in no way affect the validity of the remaining provisions of this Lease. No waiver by any party hereto of a breach of any provision of this Lease shall constitute a waiver of any preceding or succeeding breach of the same or any other provision hereof. 
+
+27. BROKERS. Lessor and Lessee each represents to the other that he, she or it did not deal with any broker or other person whe may be entitled to a commission as a result of the transaction contemplated by this Lease. 
+
+28. APPLICABLE LAW. This Lease shall in all respects be governed by the laws of the State in which the Property is located, without regard to its conflicts of law principles. 
+
+. 
+
+29. COUNTERPARTS; FACSIMILE SIGNATURES. This Lease may be executed in one or more counterparts, each of which shall be deemed an original and all of which together shall constitute one and the same instrument. A copy of this Lease bearing the signature of a party which is transmitted by facsimile shall have the same legal effect as the personal delivery of a copy of this Lease bearing an original signature. 30. NON-BINDING UNTIL FULLY EXECUTED. The parties agree that this Lease shall not be binding on either party unless and until it is fully executed by both parties. If this Lease is signed by only one party, it shall merely constitute an offer to lease. 
+
+31. ENTIRE AGREEMENT; AMENDMENTS. This Lease, together with the Exhibits attached hereto, constitutes the entire understanding and agreement of the parties with respect to its subject matter; and there are no representations, promises or agreements between the parties except those found in this Lease; and any and all prior agreements, understandings or representations with respect to its subject matter, whether written or oral, are hereby canceled in their entirety and are of no further force or effect. Any amendments to this Lease must be in writing and executed and delivered by both parties. 
+
+## SIGNED: 
+
+Page 7 of 13 
+
+Execution Copy 
+
+**==> picture [183 x 106] intentionally omitted <==**
+
+**----- Start of picture text -----**<br>
+Lake County, IL<br>rie: (ony “Bowed Unicon<br>**----- End of picture text -----**<br>
+
+
+MOTOROLASOLUTIONS, INC. Title: Sie Vet Desi Aig UfMtefer 
+
+Page 8 of 13 
+
+Execution Copy 
+
+## EXHIBIT A 
+
+## DESCRIPTION OF PROPERTY 
+
+Address or Location: 18 North County St (Communication Bldg), Waukegan, IL 60085 Real Estate Tax Identification Numbers: N/A 
+
+Page 0 of 13 
+
+Execution Copy 
+
+## EXHIBIT B 
+
+## LOCATION OF PREMISES AND EQUIPMENT 
+
+This exhibit describes the location of the Premises and Communication Equipment within the Property to be utilized by Lessee pursuant to the Lease. 
+
+|—(@® Azimuth<br>Model|—(@® Azimuth<br>Model|=§- Use|
+|---|---|---|
+|955-0.|SINCLAIR’|TX|
+||_SC476-|2 ||
+||“HFILDFD00)||
+
+
+
+Please review the feedline list. 
+
+Mfg.= Model: Length 
+
+Page 1 of 13 
+
+Execution Copy 
+
+**==> picture [215 x 197] intentionally omitted <==**
+
+**----- Start of picture text -----**<br>
+|||||
+|---|---|---|---|
+|Primary: ANDREW.|EWP63|200.|
+|Primary:|ANDREW|EWP63|200|
+|Secondary:|
+|Primary:|ANDREW|561.200|
+|Secondary:|
+|Primary:|ANDREW|561|~—-200|
+|Secondary:|
+|Primary:|ANDREW...|ALS-50:.|200°.|
+|Secondary:|pees|
+
+**----- End of picture text -----**<br>
+
+
+## RADIO SYSTEM EQUIPMENT 
+
+**==> picture [400 x 294] intentionally omitted <==**
+
+**----- Start of picture text -----**<br>
+||||||||
+|---|---|---|---|---|---|---|
+|T7038|GCP|8000|SITE|CONTROLLER|
+|CA00303AA|ADD:|QTY|(1)|SITE|CONTROLLER|
+|CA01194AA|ADD:|IP|BASED|MULTISITE|SITE|CONTROLLER SOFTWARE|
+|T7321|GCM|8000|COMPARATOR|
+|CA01183AA|ADD:|GCM|8000|COMPARATOR|
+|CA01185AA|ADD:|IP|BASED|MULTISITE|OPERATION|
+|CA01974AA|TRUNKING|REDUNDANT|COMPRTR|SW|
+|X153AW|ADD:|RACK|MOUNT|HARDWARE|
+|17321|GCM|8000|COMPARATOR|
+|CA01183AA|ADD:|GCM|8000|COMPARATOR|
+|CA01185AA|ADD:|IP|BASED|MULTISITE|OPERATION|
+|CA01974AA|TRUNKING|REDUNDANT|COMPRTR SW|
+|X153AW|ADD:|RACK|MOUNT|HARDWARE|
+|_|
+|T7321|GCM|8000|COMPARATOR|
+|CA01183AA|ADD:|GCM|8000|COMPARATOR|
+|CA01185AA|ADD:|IP|BASED|MULTISITE|OPERATION|
+|CA01974AA|__|TRUNKING REDUNDANT COMPRTR SW|
+
+**----- End of picture text -----**<br>
+
+
+Page 2 of 13 
+
+Execution Copy 
+
+. 
+
+**==> picture [506 x 539] intentionally omitted <==**
+
+**----- Start of picture text -----**<br>
+||||||||||||||
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|1|| x153AW|ADD:|RACK MOUNT HARDWARE|
+|T7321|GCM|8000|COMPARATOR|
+|CA01183AA|ADD:|GCM|8000|COMPARATOR|
+|CA01185AA|ADD:|IP|BASED|MULTISITE|OPERATION|
+|CA01974AA|TRUNKING|REDUNDANT|COMPRTR|SW|
+|X153AW|ADD:|RACK MOUNT HARDWARE|
+|T7321|GCM|8000|COMPARATOR|
+|CA01183AA|ADD:|GCM|8000|COMPARATOR|
+|CA01185AA|ADD:|IP|BASED|MULTISITE|OPERATION|
+|CA01974AA|TRUNKING|REDUNDANT COMPRTR SW|
+|X153AW|ADD:|RACK|MOUNT|HARDWARE|
+|SQM01SUM0205|GGM|8000|GATEWAY|
+|CA01616AA|ADD:|AC|POWER|
+|CLN1859|2620-48|ETHERNET|SWITCH|
+|SQM01SUMO0205|GGM|8000|GATEWAY|
+|CA01616AA|ADD:|AC|POWER|
+|CLN1856|2620-24|ETHERNET|SWITCH|
+|PRIME/MASTER|SITE|REDUNDANT|MODULAR|FREQUENCY TIMING|SYSTEM|
+|1_||DSTRAK91008E|AC|
+|DDN9769|F1PNM-HC|1/4" TYPE|N|MALE|CONNECTOR|FOR|FSJ1-50A|CABLE|
+|L1700|FSJ1-50A|CABLE:|1/4"|SUPERFLEX|POLY JKT|PER|FOOT|
+|F4544|SITE|MANAGER ADVANCED|
+|F2463|RTU_PERDEVICE|SW_LICENSES|
+|V266|ADD:|90VAC|TO|260VAC|PS|TO|SM|
+|V592|AAD|TERM|BLCK|& CONN|WI|
+|VA00211|SDM3000|ASTRO|FW|FOR|A7.13|
+|DS48353103|SEVEN|FOOT|UNIVERSAL|RACK|
+|DSTSJ100BT|SPD,|RJ-48 8|PIN,|10/100 BASE T TSJ|PROTECTS/PASSES ON ALL 8|PIN|
+|DSTSJADP|RACK|MOUNT|GROUND|BAR,|19|IN|FOR|TSJ|AND|WPH|SERIES|DATA SPDS|
+|DSOP820B|PDU,|120V|HARDWIRE|(8)|20A|OUTLET|PDU WITH|TYPE|3|SAD|PROTECTION|
+|RACK|MT ADAPTER|PLATE,|19|IN|FOR|DSOP820B,|DSOP820B2|&|
+|2|| DS1101378|DSNSOP820B|
+
+**----- End of picture text -----**<br>
+
+
+Page 3 of 13 
+
+Execution Copy 
+
+| 
+
+Lessor’s Access Contacts: 
+
+During Business Hours: After Business Hours: Name: M-siic engineer Name: Veremuiah Varco Phone SU) -¥33- Salk Phone: 5Uu1-304 -4\2 Cell/PCS: Cell/PCS: Pager: Pager: 
+
+If drawings are included as part of this Exhibit B, Lessee may replace the attached drawings of the location of the Premises and Communication Equipment with as-built drawings depicting same. Such replacement drawings shall be deemed a part of this Lease and be binding on Lessee and Lessor. 
+
+Atternake Contact: Chad Wrigut 224 - Bole - 8324 
+
+Page 4 of 13 
+

@@ -1,0 +1,471 @@
+import json
+import os
+import re
+
+import anthropic
+import pandas as pd
+import plotly.express as px
+import streamlit as st
+from dotenv import load_dotenv
+from pathlib import Path
+from sentence_transformers import SentenceTransformer
+from supabase import create_client
+
+load_dotenv(Path(__file__).parent / ".env")
+
+SCHEMA = """
+Table: contracts (PostgreSQL)
+  id, contract_instance_id, contract_id, vendor_name, vendor_name_normalized,
+  contract_title, document_type (Agreement|SOW|Modification|Renewal|Award|Lease|Other),
+  execution_date, effective_date, expiration_date,
+  total_contract_value_usd (numeric, null for hourly contracts),
+  hourly_rates (text, e.g. '$150/hr (Engineer)'), auto_renewal_flag (boolean),
+  payment_terms, internal_department, source_filename
+"""
+
+ROUTER_SYSTEM = f"""You are a query router for a Lake County contracts database.
+
+Given a user question, decide how to answer it and return JSON only — no other text.
+
+Modes:
+- "sql"    — answer can be derived entirely from schema columns (dates, values, vendors, counts, departments, flags like auto_renewal_flag, payment_terms, document_type, etc.). Prefer sql whenever a schema column can answer the question.
+- "rag"    — question asks about contract content not captured in any schema column (specific clause language, obligations, liability terms, detailed conditions in the document text)
+- "hybrid" — needs both: first find the right documents via SQL, then search their full text content
+
+Return this JSON format:
+{{
+  "mode": "sql" | "rag" | "hybrid",
+  "sql": "<SELECT query or null>",
+  "reasoning": "<one sentence>"
+}}
+
+For sql and hybrid modes, write a valid PostgreSQL SELECT query against the contracts table. Make sure to include source_filename as well.
+Strip trailing semicolons from SQL.
+The sql field should be null for rag mode.
+
+Schema:
+{SCHEMA}
+"""
+
+ANSWER_SYSTEM = """You are a helpful assistant summarizing Lake County government contract data.
+Answer the user's question clearly and concisely using only the provided context.
+Be specific — include vendor names, dollar amounts, and dates where relevant.
+Format lists as markdown bullet points.
+Always cite which document(s) the information comes from.
+If the context doesn't contain enough information to answer, say so clearly."""
+
+CONSOLIDATE_PROMPT = """Identify vendor consolidation opportunities across active contracts (exclude any contracts where the expiration date has already passed). Look for two types of consolidation opportunity:
+
+Different contracts, similar services: Cases where two or more vendors hold separate contracts, different contract IDs, and appear to be providing similar or overlapping services. Use both the contract titles and the scope of work text to judge similarity; don't rely on titles alone since they are sometimes generic. Look especially for vendors serving multiple departments with similar scopes. Those cross-department relationships represent the strongest consolidation leverage.
+
+Same contract, multiple vendors: Cases where the same contract ID was awarded to more than one vendor, such as a JOC pool or a multi-vendor services contract. These are intentional at award time but represent an opportunity to reduce the vendor pool at renewal. For combined spend, sum the total contract value across all vendors under that contract ID individually. Do not use a single contract-level figure.
+
+For each opportunity identified, output a row in the following table:
+| Vendors | Contract ID(s) | Shared Service | Departments | Combined Spend | Earliest Expiry | Opportunity Type | Rationale |
+
+- Opportunity Type: "Multi-vendor contract" or "Fragmented spend"
+- Combined Spend: sum each vendor's individual highest contract value; note null for any hourly or unit-rate vendors where no fixed total exists
+- Earliest Expiry: the soonest natural exit or renegotiation window
+- Rationale: one sentence on what overlaps, which vendor is the preferred consolidation target, and why
+
+Rank rows by combined spend, highest first. Flag any rows where scope overlap is uncertain so the user can review manually before acting. If contract text is needed to confirm scope overlap, search it before reporting."""
+
+RENEWAL_RISK_PROMPT = """Find all active contracts that will expire within 180 days, for each contract, look for other contracts with same contract id and vendor for contract value. look in contact table for auto renewal status. for each contract returned assess the following risk signals. Pull from both the contracts table fields and the contract text where needed:
+
+Auto-renewal risk: look in contracts table for auto renewal status. Does this contract auto-renew? If so, find the notice period in the contract text and calculate the opt-out deadline (expiration date minus notice period). Flag whether the deadline has already passed, is within 30 days, or is still manageable. A contract that auto-renews with an imminent opt-out deadline is the highest priority item on this list.
+
+High value: Flag any contract above $100,000. If no fixed contract value is available, check whether the contract has hourly or unit rates. If so, surface the rate structure so the reader can assess exposure even without a committed total. If neither a fixed value nor a rate can be found, mark the value as unknown and flag it for manual review. Missing a renewal decision on a high-value or high-volume contract has the most financial consequence.
+
+Price escalation: Check the contract text for any CPI adjustments, annual increases, or escalation clauses that will trigger on renewal. If costs are going up automatically, the county needs to decide whether to accept, renegotiate, or exit.
+
+Long-running relationship: Flag any contract that has already been renewed three or more times. These tend to accumulate informal scope additions and often haven't been competitively bid in years. Renewal is the leverage point to renegotiate terms. For these, note the number of prior renewals and approximate years in service.
+
+Single source or specialized vendor: Flag contracts for specialized services with few alternative providers. Replacement lead time may be long and there may be little negotiating leverage.
+
+Incomplete information: Flag any contract where the expiration date, notice period, or auto-renewal status could not be confirmed. These are risk items by virtue of the gap alone.
+
+Output contracts with any of the risk signals in the following table, sorted by priority (auto-renewals with imminent deadlines first, then high-value contracts, then remaining by days remaining):
+
+| Vendor | Contract ID | Department | Expiry Date | Days Left | highest Contract Value / Rate | Auto-Renews | Opt-Out Deadline | Prior Renewals | Risk Flags | Recommended Action |
+
+Contract Value / Rate: use fixed TCV where available; if null, show the hourly or unit rate structure (e.g. "$185/hr — Engineering"); if neither is available, display "Unknown — check contract" Risk Flags: comma-separated list of applicable signals (e.g. "Auto-renewal, High value, Escalation clause") Recommended Action: one of — Act immediately / Schedule review / Monitor / Confirm data Opt-Out Deadline: populate only if contract auto-renews; otherwise leave blank"""
+
+
+@st.cache_resource
+def get_clients():
+    supabase = create_client(os.environ["SUPABASE_URL"], os.environ["SUPABASE_SERVICE_KEY"])
+    claude = anthropic.Anthropic(
+        api_key=os.environ.get("ANTHROPIC_API") or os.environ.get("ANTHROPIC_API_KEY")
+    )
+    return supabase, claude
+
+
+@st.cache_resource
+def get_embedder():
+    return SentenceTransformer("all-MiniLM-L6-v2")
+
+
+@st.cache_data(ttl=300)
+def load_all_contracts(_supabase):
+    rows = _supabase.table("contracts").select("*").execute().data
+    df = pd.DataFrame(rows)
+    for col in ["execution_date", "effective_date", "expiration_date"]:
+        df[col] = pd.to_datetime(df[col], errors="coerce")
+    df["total_contract_value_usd"] = pd.to_numeric(df["total_contract_value_usd"], errors="coerce")
+    df["auto_renewal_flag"] = df["auto_renewal_flag"].astype(bool)
+    return df
+
+
+def route(claude: anthropic.Anthropic, question: str) -> dict:
+    resp = claude.messages.create(
+        model="claude-sonnet-4-6",
+        max_tokens=1024,
+        system=ROUTER_SYSTEM,
+        messages=[{"role": "user", "content": question}],
+    )
+    text = resp.content[0].text.strip()
+    if "```" in text:
+        match = re.search(r"```(?:json)?\s*(.*?)```", text, re.DOTALL)
+        text = match.group(1).strip() if match else text
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        return {"mode": "rag", "sql": None, "reasoning": "Router fallback — defaulting to RAG"}
+
+
+def run_sql(supabase, sql: str) -> list[dict]:
+    result = supabase.rpc("run_read_query", {"query_text": sql.rstrip(";")}).execute()
+    return result.data or []
+
+
+def run_rag(supabase, embedder, question: str, filter_filenames: list[str] | None = None) -> list[dict]:
+    embedding = embedder.encode(question).tolist()
+    params = {"query_embedding": embedding, "query_text": question, "match_count": 15}
+    if filter_filenames:
+        # In hybrid mode, restrict vector search to only the documents identified by SQL
+        params["filter_filenames"] = filter_filenames
+    result = supabase.rpc("match_chunks", params).execute()
+    return result.data or []
+
+
+def format_answer(claude: anthropic.Anthropic, question: str, context: str, history: list[dict]) -> str:
+    # Include the last 6 messages for conversational context without blowing the context window
+    messages = []
+    for msg in history[-6:]:
+        messages.append({"role": msg["role"], "content": msg["content"]})
+    messages.append({"role": "user", "content": f"Question: {question}\n\nContext:\n{context}"})
+    resp = claude.messages.create(
+        model="claude-sonnet-4-6",
+        max_tokens=4096,
+        system=ANSWER_SYSTEM,
+        messages=messages,
+    )
+    return resp.content[0].text.strip()
+
+
+def handle_question(question: str, supabase, claude, embedder, history: list[dict] | None = None) -> tuple[str, str | None, str]:
+    routing = route(claude, question)
+    mode = routing.get("mode", "rag")
+    sql = routing.get("sql")
+
+    if mode == "sql":
+        try:
+            rows = run_sql(supabase, sql)
+        except Exception as e:
+            return f"Query failed: {e}", sql, mode
+        context = f"SQL results:\n{json.dumps(rows, default=str)}"
+
+    elif mode == "rag":
+        chunks = run_rag(supabase, embedder, question)
+        context = "\n\n".join(
+            f"[{c['source_filename']}]\n{c['chunk_text']}" for c in chunks
+        )
+
+    else:  # hybrid: SQL narrows to relevant documents, RAG searches their full text
+        try:
+            rows = run_sql(supabase, sql)
+        except Exception as e:
+            return f"SQL step failed: {e}", sql, mode
+        filenames = [r["source_filename"] for r in rows if r.get("source_filename")]
+        chunks = run_rag(supabase, embedder, question, filter_filenames=filenames or None)
+        sql_summary = f"SQL results:\n{json.dumps(rows, default=str)}"
+        rag_context = "\n\n".join(
+            f"[{c['source_filename']}]\n{c['chunk_text']}" for c in chunks
+        )
+        context = f"{sql_summary}\n\nRelevant document excerpts:\n{rag_context}"
+
+    answer = format_answer(claude, question, context, history or [])
+    return answer, sql, mode
+
+
+def fmt_usd(val):
+    if pd.isna(val):
+        return "—"
+    return f"${val:,.0f}"
+
+
+def render_dashboard(supabase):
+    df = load_all_contracts(supabase)
+
+    if df.empty:
+        st.info("No contract data available.")
+        return
+
+    today = pd.Timestamp.today().normalize()
+    horizon = today + pd.DateOffset(months=12)
+
+    # Top-level metrics
+    total_docs = len(df)
+    unique_contracts = df["contract_id"].replace("", pd.NA).dropna().nunique()
+    known_value = df["total_contract_value_usd"].sum()
+    auto_count = int(df["auto_renewal_flag"].sum())
+    auto_value = df.loc[df["auto_renewal_flag"], "total_contract_value_usd"].sum()
+
+    c1, c2, c3, c4 = st.columns(4)
+    c1.metric("Documents", total_docs)
+    c2.metric("Unique Contracts", unique_contracts)
+    c3.metric("Total Value (known)", fmt_usd(known_value))
+    c4.metric("Auto-Renewing", f"{auto_count}  ·  {fmt_usd(auto_value)}")
+    st.caption("Values are summed across all documents per contract family and may include amendments.")
+
+    st.divider()
+
+    st.subheader("Contracts Expiring in the Next 12 Months")
+
+    family_max_value = df.groupby("contract_instance_id")["total_contract_value_usd"].max()
+    view_df = df[(df["expiration_date"] >= today) & (df["expiration_date"] <= horizon)].copy()
+
+    if view_df.empty:
+        st.info("No contracts expiring in the next 12 months.")
+    else:
+        view_df["Month"] = view_df["expiration_date"].dt.to_period("M").astype(str)
+        view_df["Status"] = view_df["auto_renewal_flag"].map({True: "Auto-Renews", False: "Needs Action"})
+        monthly = (
+            view_df.groupby(["Month", "Status"])
+            .size()
+            .reset_index(name="Count")
+            .sort_values("Month")
+        )
+        fig = px.bar(
+            monthly, x="Month", y="Count", color="Status", barmode="stack",
+            color_discrete_map={"Auto-Renews": "#66BB6A", "Needs Action": "#EF5350"},
+        )
+        fig.update_layout(
+            xaxis_tickangle=-45,
+            legend=dict(orientation="h", yanchor="bottom", y=1.02),
+            margin=dict(t=40),
+        )
+        st.plotly_chart(fig, use_container_width=True)
+
+        view_df["family_value"] = view_df["contract_instance_id"].map(family_max_value)
+        table = view_df[
+            ["vendor_name", "contract_title", "document_type", "execution_date", "expiration_date", "family_value", "internal_department"]
+        ].sort_values("expiration_date").copy()
+        table["execution_date"] = table["execution_date"].dt.date
+        table["expiration_date"] = table["expiration_date"].dt.date
+        table["family_value"] = table["family_value"].apply(fmt_usd)
+        table.columns = ["Vendor", "Title", "Type", "Executed", "Expires", "Value", "Department"]
+        st.caption(f"{len(view_df)} contracts expiring in the next 12 months ({int(view_df['auto_renewal_flag'].sum())} auto-renew)")
+        st.dataframe(table, use_container_width=True, hide_index=True)
+
+    st.divider()
+
+    # Vendor spend  +  Department spend
+    spend_view = st.selectbox("View", ["Active", "Historical"], key="spend_view", label_visibility="collapsed")
+    active_mask = df["expiration_date"].isna() | (df["expiration_date"] >= today)
+    spend_df = df[active_mask] if spend_view == "Active" else df[~active_mask]
+
+    col_l, col_r = st.columns(2)
+
+    with col_l:
+        st.subheader("Top Vendors by Contract Value")
+        per_contract = spend_df.groupby("contract_instance_id").agg(
+            vendor_name=("vendor_name", "first"),
+            total_contract_value_usd=("total_contract_value_usd", "max"),
+        ).reset_index()
+        vendor_spend = (
+            per_contract.groupby("vendor_name")["total_contract_value_usd"]
+            .sum()
+            .dropna()
+            .nlargest(15)
+            .sort_values()
+            .reset_index()
+        )
+        vendor_spend.columns = ["Vendor", "Value"]
+        fig = px.bar(
+            vendor_spend, x="Value", y="Vendor", orientation="h",
+            labels={"Value": "Total Value (USD)", "Vendor": ""},
+        )
+        fig.update_layout(yaxis=dict(tickfont=dict(size=10)), margin=dict(l=10))
+        st.plotly_chart(fig, use_container_width=True)
+
+    with col_r:
+        st.subheader("Spend by Department")
+        dept_spend = (
+            spend_df[spend_df["internal_department"].fillna("").str.strip() != ""]
+            .groupby("internal_department")["total_contract_value_usd"]
+            .sum()
+            .reset_index()
+        )
+        dept_spend.columns = ["Department", "Value"]
+        dept_spend = dept_spend[dept_spend["Value"] > 0].sort_values("Value")
+        fig = px.bar(
+            dept_spend, x="Value", y="Department", orientation="h",
+            labels={"Value": "Total Value (USD)", "Department": ""},
+        )
+        fig.update_layout(yaxis=dict(tickfont=dict(size=10)), margin=dict(l=10))
+        st.plotly_chart(fig, use_container_width=True)
+
+    st.divider()
+
+    # Document type  +  Value distribution
+    col_l, col_r = st.columns(2)
+
+    with col_l:
+        st.subheader("Document Type Breakdown")
+        doc_counts = df["document_type"].value_counts().reset_index()
+        doc_counts.columns = ["Type", "Count"]
+        fig = px.pie(doc_counts, names="Type", values="Count", hole=0.4)
+        fig.update_traces(textposition="inside", textinfo="percent+label")
+        fig.update_layout(showlegend=False)
+        st.plotly_chart(fig, use_container_width=True)
+
+    with col_r:
+        st.subheader("Contract Value Distribution")
+        valued = df["total_contract_value_usd"].dropna().rename("Contract Value (USD)")
+        fig = px.histogram(
+            valued, x="Contract Value (USD)", nbins=25,
+            labels={"Count": "Number of Documents"},
+        )
+        fig.update_layout(bargap=0.05, showlegend=False)
+        st.plotly_chart(fig, use_container_width=True)
+
+    st.divider()
+
+    # Data completeness scorecard
+    st.subheader("Extraction Completeness")
+    fields = {
+        "expiration_date": "Expiration Date",
+        "effective_date": "Effective Date",
+        "execution_date": "Execution Date",
+        "total_contract_value_usd": "Contract Value",
+        "internal_department": "Department",
+        "payment_terms": "Payment Terms",
+        "hourly_rates": "Hourly Rates",
+    }
+    completeness_rows = []
+    for col, label in fields.items():
+        if col not in df.columns:
+            continue
+        if pd.api.types.is_numeric_dtype(df[col]):
+            missing = df[col].isna()
+        else:
+            missing = df[col].isna() | (df[col].fillna("").astype(str).str.strip() == "")
+        missing_n = int(missing.sum())
+        pct = round((1 - missing_n / len(df)) * 100, 1)
+        completeness_rows.append({"Field": label, "% Complete": pct, "Missing": missing_n})
+
+    comp_df = pd.DataFrame(completeness_rows).sort_values("% Complete")
+    fig = px.bar(
+        comp_df, x="% Complete", y="Field", orientation="h",
+        color="% Complete",
+        color_continuous_scale=["#EF5350", "#FFA726", "#66BB6A"],
+        range_color=[0, 100],
+        text="% Complete",
+    )
+    fig.update_traces(texttemplate="%{text}%", textposition="outside")
+    fig.update_layout(
+        coloraxis_showscale=False,
+        xaxis_range=[0, 115],
+        yaxis=dict(tickfont=dict(size=11)),
+    )
+    st.plotly_chart(fig, use_container_width=True)
+
+
+def main():
+    st.set_page_config(page_title="Lake County Contracts", page_icon="📄", layout="wide")
+    st.title("Lake County Contracts")
+
+    supabase, claude = get_clients()
+    embedder = get_embedder()
+
+    with st.sidebar:
+        st.markdown("### Navigate to")
+        view = st.selectbox("Navigate to", ["💬 Chat", "📊 Dashboard"], label_visibility="collapsed")
+        st.divider()
+
+        if view == "💬 Chat":
+            st.markdown("### Example questions")
+            examples = [
+                "Which contracts have auto-renewal clauses?",
+                "Which contracts have the highest total value?",
+                "Which department has the most contracts?",
+                "Which contracts have termination for convenience clauses?",
+                "What are the insurance requirements in the Tyler Technologies agreement?",
+            ]
+            for ex in examples:
+                if st.button(ex, key=ex, use_container_width=True):
+                    st.session_state["prefill"] = ex
+            
+            st.divider()
+
+            st.markdown("### Automated Insights")
+            st.markdown("Use `/consolidate` to identify vendor consolidation opportunities across active contracts")
+            if st.button("/consolidate", key="cmd_consolidate", use_container_width=True):
+                st.session_state["prefill"] = "/consolidate"
+            st.markdown("Use `/renewalrisk` to analyze renewal risks for contracts expiring within 180 days.")
+            if st.button("/renewalrisk", key="cmd_renewalrisk", use_container_width=True):
+                st.session_state["prefill"] = "/renewalrisk"
+
+    if view == "💬 Chat":
+        st.caption("Ask questions about vendors, values, dates, departments, or contract content.")
+
+        if "messages" not in st.session_state:
+            st.session_state.messages = []
+
+        for msg in st.session_state.messages:
+            with st.chat_message(msg["role"]):
+                st.markdown(msg["content"])
+                if msg.get("sql"):
+                    with st.expander(f"View SQL ({msg.get('mode', '')})"):
+                        st.code(msg["sql"], language="sql")
+
+        prefill = st.session_state.pop("prefill", None)
+        question = st.chat_input("Ask about contracts...") or prefill
+
+        if question:
+            st.session_state.messages.append({"role": "user", "content": question})
+            with st.chat_message("user"):
+                st.markdown(question)
+
+            with st.chat_message("assistant"):
+                with st.spinner("Thinking..."):
+                    q = question.strip().lower()
+                    if q.startswith("/consolidate"):
+                        routed_question = CONSOLIDATE_PROMPT
+                    elif q.startswith("/renewalrisk"):
+                        routed_question = RENEWAL_RISK_PROMPT
+                    else:
+                        routed_question = question
+                    answer, sql, mode = handle_question(routed_question, supabase, claude, embedder, st.session_state.messages)
+                st.markdown(answer)
+                if sql:
+                    with st.expander(f"SQL · {mode.upper()}"):
+                        st.code(sql, language="sql")
+
+            st.session_state.messages.append({
+                "role": "assistant",
+                "content": answer,
+                "sql": sql,
+                "mode": mode,
+            })
+
+            if prefill:
+                st.rerun()
+
+    else:
+        render_dashboard(supabase)
+
+
+if __name__ == "__main__":
+    main()

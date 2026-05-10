@@ -332,10 +332,10 @@ def render_dashboard(supabase):
 
     with col_r:
         st.subheader("Contract Value Distribution")
-        valued = df["total_contract_value_usd"].dropna()
+        valued = df["total_contract_value_usd"].dropna().rename("Contract Value (USD)")
         fig = px.histogram(
-            valued, x=valued, nbins=25,
-            labels={"x": "Contract Value (USD)", "count": "Number of Documents"},
+            valued, x="Contract Value (USD)", nbins=25,
+            labels={"Count": "Number of Documents"},
         )
         fig.update_layout(bargap=0.05, showlegend=False)
         st.plotly_chart(fig, use_container_width=True)
@@ -380,10 +380,6 @@ def render_dashboard(supabase):
         yaxis=dict(tickfont=dict(size=11)),
     )
     st.plotly_chart(fig, use_container_width=True)
-    st.caption(
-        "Hourly Rates and Payment Terms are intentionally null for many contracts. "
-        "Low completeness on date fields indicates extraction gaps worth reviewing."
-    )
 
 
 def main():
@@ -399,26 +395,27 @@ def main():
         st.divider()
 
         if view == "💬 Chat":
-            st.markdown("### Quick Commands")
-            st.markdown("Use `/consolidate` to identify vendor consolidation opportunities across active contracts")
-            if st.button("/consolidate", key="cmd_consolidate", use_container_width=True):
-                st.session_state["prefill"] = "/consolidate"
-            st.markdown("`Use /renewalrisk` surface contracts expiring within 180 days with risk signals like auto-renewal deadlines and escalation clauses")
-            if st.button("/renewalrisk", key="cmd_renewalrisk", use_container_width=True):
-                st.session_state["prefill"] = "/renewalrisk"
-
-            st.divider()
             st.markdown("### Example questions")
             examples = [
+                "Which contracts have auto-renewal clauses?",
                 "Which contracts have the highest total value?",
                 "Which department has the most contracts?",
-                "List all contracts expiring in 2026.",
                 "Which contracts have termination for convenience clauses?",
                 "What are the insurance requirements in the Tyler Technologies agreement?",
             ]
             for ex in examples:
                 if st.button(ex, key=ex, use_container_width=True):
                     st.session_state["prefill"] = ex
+            
+            st.divider()
+
+            st.markdown("### Automated Insights")
+            st.markdown("Use `/consolidate` to identify vendor consolidation opportunities across active contracts")
+            if st.button("/consolidate", key="cmd_consolidate", use_container_width=True):
+                st.session_state["prefill"] = "/consolidate"
+            st.markdown("Use `/renewalrisk` surface contracts expiring within 180 days with risk signals like auto-renewal deadlines and escalation clauses")
+            if st.button("/renewalrisk", key="cmd_renewalrisk", use_container_width=True):
+                st.session_state["prefill"] = "/renewalrisk"
 
     if view == "💬 Chat":
         st.caption("Ask questions about vendors, values, dates, departments, or contract content.")

@@ -413,7 +413,7 @@ def main():
             st.markdown("Use `/consolidate` to identify vendor consolidation opportunities across active contracts")
             if st.button("/consolidate", key="cmd_consolidate", use_container_width=True):
                 st.session_state["prefill"] = "/consolidate"
-            st.markdown("Use `/renewalrisk` surface contracts expiring within 180 days with risk signals like auto-renewal deadlines and escalation clauses")
+            st.markdown("Use `/renewalrisk` to analyze renewal risks for contracts expiring within 180 days.")
             if st.button("/renewalrisk", key="cmd_renewalrisk", use_container_width=True):
                 st.session_state["prefill"] = "/renewalrisk"
 

@@ -65,6 +65,7 @@ logs/
 # IDEs
 .idea/
 .vscode/
+.devcontainer/
 *.swp
 *.swo
 *~

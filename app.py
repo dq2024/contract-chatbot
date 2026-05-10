@@ -70,6 +70,26 @@ For each opportunity identified, output a row in the following table:
 
 Rank rows by combined spend, highest first. Flag any rows where scope overlap is uncertain so the user can review manually before acting. If contract text is needed to confirm scope overlap, search it before reporting."""
 
+RENEWAL_RISK_PROMPT = """Find all active contracts that will expire within 180 days, for each contract, look for other contracts with same contract id and vendor for contract value. look in contact table for auto renewal status. for each contract returned assess the following risk signals. Pull from both the contracts table fields and the contract text where needed:
+
+Auto-renewal risk: look in contracts table for auto renewal status. Does this contract auto-renew? If so, find the notice period in the contract text and calculate the opt-out deadline (expiration date minus notice period). Flag whether the deadline has already passed, is within 30 days, or is still manageable. A contract that auto-renews with an imminent opt-out deadline is the highest priority item on this list.
+
+High value: Flag any contract above $100,000. If no fixed contract value is available, check whether the contract has hourly or unit rates. If so, surface the rate structure so the reader can assess exposure even without a committed total. If neither a fixed value nor a rate can be found, mark the value as unknown and flag it for manual review. Missing a renewal decision on a high-value or high-volume contract has the most financial consequence.
+
+Price escalation: Check the contract text for any CPI adjustments, annual increases, or escalation clauses that will trigger on renewal. If costs are going up automatically, the county needs to decide whether to accept, renegotiate, or exit.
+
+Long-running relationship: Flag any contract that has already been renewed three or more times. These tend to accumulate informal scope additions and often haven't been competitively bid in years. Renewal is the leverage point to renegotiate terms. For these, note the number of prior renewals and approximate years in service.
+
+Single source or specialized vendor: Flag contracts for specialized services with few alternative providers. Replacement lead time may be long and there may be little negotiating leverage.
+
+Incomplete information: Flag any contract where the expiration date, notice period, or auto-renewal status could not be confirmed. These are risk items by virtue of the gap alone.
+
+Output contracts with any of the risk signals in the following table, sorted by priority (auto-renewals with imminent deadlines first, then high-value contracts, then remaining by days remaining):
+
+| Vendor | Contract ID | Department | Expiry Date | Days Left | highest Contract Value / Rate | Auto-Renews | Opt-Out Deadline | Prior Renewals | Risk Flags | Recommended Action |
+
+Contract Value / Rate: use fixed TCV where available; if null, show the hourly or unit rate structure (e.g. "$185/hr — Engineering"); if neither is available, display "Unknown — check contract" Risk Flags: comma-separated list of applicable signals (e.g. "Auto-renewal, High value, Escalation clause") Recommended Action: one of — Act immediately / Schedule review / Monitor / Confirm data Opt-Out Deadline: populate only if contract auto-renews; otherwise leave blank"""
+
 
 @st.cache_resource
 def get_clients():
@@ -380,9 +400,12 @@ def main():
 
         if view == "💬 Chat":
             st.markdown("### Quick Commands")
-            st.markdown("`/consolidate` identify vendor consolidation opportunities to save cost across active contracts")
+            st.markdown("Use `/consolidate` to identify vendor consolidation opportunities across active contracts")
             if st.button("/consolidate", key="cmd_consolidate", use_container_width=True):
                 st.session_state["prefill"] = "/consolidate"
+            st.markdown("`Use /renewalrisk` surface contracts expiring within 180 days with risk signals like auto-renewal deadlines and escalation clauses")
+            if st.button("/renewalrisk", key="cmd_renewalrisk", use_container_width=True):
+                st.session_state["prefill"] = "/renewalrisk"
 
             st.divider()
             st.markdown("### Example questions")
@@ -420,7 +443,13 @@ def main():
 
             with st.chat_message("assistant"):
                 with st.spinner("Thinking..."):
-                    routed_question = CONSOLIDATE_PROMPT if question.strip().lower().startswith("/consolidate") else question
+                    q = question.strip().lower()
+                    if q.startswith("/consolidate"):
+                        routed_question = CONSOLIDATE_PROMPT
+                    elif q.startswith("/renewalrisk"):
+                        routed_question = RENEWAL_RISK_PROMPT
+                    else:
+                        routed_question = question
                     answer, sql, mode = handle_question(routed_question, supabase, claude, embedder, st.session_state.messages)
                 st.markdown(answer)
                 if sql:

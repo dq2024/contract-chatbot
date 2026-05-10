@@ -1,0 +1,216 @@
+[
+  {
+    "id": "ragas_001",
+    "type": "ragas",
+    "question": "What are the payment terms in the Motorola leases?"
+  },
+  {
+    "id": "ragas_002",
+    "type": "ragas",
+    "question": "Do any contracts contain indemnification clauses?"
+  },
+  {
+    "id": "ragas_003",
+    "type": "ragas",
+    "question": "What are the insurance requirements in the Tyler Technologies agreement?"
+  },
+  {
+    "id": "ragas_004",
+    "type": "ragas",
+    "question": "Which contracts have termination for convenience clauses?"
+  },
+  {
+    "id": "ragas_005",
+    "type": "ragas",
+    "question": "What does contract 23159 say about job order contracting?"
+  },
+  {
+    "id": "retrieval_001",
+    "type": "retrieval",
+    "question": "Which contracts have auto-renewal clauses?",
+    "expected_filenames": [
+      "14234_FULLY_EXECUTED_AGREEMENT_TYLER_7_20_15.pdf"
+    ]
+  },
+  {
+    "id": "retrieval_002",
+    "type": "retrieval",
+    "question": "Which contracts are up for renewal in 2026?",
+    "expected_filenames": [
+      "23039_Fully_Executed_Agreement.pdf",
+      "21049_Contract_Renewal_24_25.pdf",
+      "21080_Vendor_Renewal_Letter_24_25.pdf",
+      "21058_Vendor_Renewal_24_25.pdf",
+      "22060_Employee_pre_employment_physicals_and_vaccinations_Renewal_Letter_2024_2025_(002).pdf",
+      "21171_Contract_Renewal_Letter_25_26.pdf",
+      "22162_Contract_Renewal_Letter_25_26.pdf",
+      "22007_Contract_Renewal_Letter_2025_2026.pdf",
+      "2025_01_15__Contract_23036__Renewal_Letter_25_26.pdf",
+      "21003__60_Day_Extension.pdf",
+      "23018_Contract_Renewal_2025_2026.pdf",
+      "21018_Vendor_Renewal_Letter_25_26.pdf",
+      "23104_Renewal_Letter_25_26.pdf",
+      "23076_Renewal_Letter_25_26.pdf",
+      "22050_Vendor_Renewal_Letter_25_26.pdf",
+      "2025_09_23__Renewal_of_Contract_22053.pdf",
+      "22128_1_Renewal_Letter__25_26.pdf",
+      "22128_2_Renewal_Letter__25_26.pdf",
+      "2025_09_09_23145_Vendor_Renewal_Letter_25_26.pdf",
+      "2025_12_4_Agreement_23159_Vendor_Renewal_Letter__AGAE_Contractors_Inc.pdf",
+      "2025_12_4_Agreement_23159_Vendor_Renewal_Letter__Leopardo_Companies_Inc.pdf",
+      "2025_12_4_Agreement_23159_Vendor_Renewal_Letter__McDonagh.pdf"
+    ]
+  },
+  {
+    "id": "retrieval_003",
+    "type": "retrieval",
+    "question": "How much are we paying Advocate Medical?",
+    "expected_filenames": [
+      "22060_Fully_Executed_Agreement.pdf"
+    ]
+  },
+  {
+    "id": "retrieval_004",
+    "type": "retrieval",
+    "question": "Show me top 10 vendors by total contract value.",
+    "expected_filenames": [
+      "2025_11_12_Contract_23159_with_AGAE_Modification_2_EXECUTED.pdf",
+      "2025_11_06_Contract_23159_with_Leopardo_Modification_2_EXECUTED.pdf",
+      "2025_11_06_Contract_23159_with_McDonagh_Modification_No_2_EXECUTED.pdf",
+      "24210_Intent_to_Award_Letter.pdf",
+      "23002_Award_Letter.pdf",
+      "23041_Intent_to_Award_Letter.pdf",
+      "23034_Intent_to_Award_Letter.pdf",
+      "23097_Award_Letter.pdf",
+      "23007_Award_Letter.pdf",
+      "21119_Fully_Executed_Agreement.pdf"
+    ]
+  },
+  {
+    "id": "retrieval_005",
+    "type": "retrieval",
+    "question": "Which contracts are expiring in the next 12 months and auto-renew?",
+    "expected_filenames": []
+  },
+  {
+    "id": "retrieval_006",
+    "type": "retrieval",
+    "question": "What does the indemnification clause in contract 16069 say?",
+    "expected_filenames": [
+      "16069_Agreement_fully_executed.pdf"
+    ]
+  },
+  {
+    "id": "retrieval_007",
+    "type": "retrieval",
+    "question": "Tell me about contract 23159?",
+    "expected_filenames": [
+      "2025_10_20_Contract_23159_with_McDonagh_Modification_No_1_EXECUTED.pdf",
+      "2025_11_06_Contract_23159_with_Leopardo_Modification_2_EXECUTED.pdf",
+      "2025_11_06_Contract_23159_with_Leopardo_Modification_No_1_EXECUTED.pdf",
+      "2025_11_06_Contract_23159_with_McDonagh_Modification_No_2_EXECUTED.pdf",
+      "2025_11_12_Contract_23159_with_AGAE_Modification_1_EXECUTED.pdf",
+      "2025_11_12_Contract_23159_with_AGAE_Modification_2_EXECUTED.pdf",
+      "2025_12_4_Agreement_23159_Vendor_Renewal_Letter__AGAE_Contractors_Inc.pdf",
+      "2025_12_4_Agreement_23159_Vendor_Renewal_Letter__Leopardo_Companies_Inc.pdf",
+      "2025_12_4_Agreement_23159_Vendor_Renewal_Letter__McDonagh.pdf",
+      "23159__AGAE__Vendor_Disclosure_2025.pdf",
+      "23159__Leopardo_Companies_Inc__Vendor_Disclosure_2025.pdf",
+      "23159__McDonagh__Vendor_Disclosure_2025.pdf",
+      "23159_Award_Letter__AGAE.pdf",
+      "23159_Award_Letter__Leopardo.pdf",
+      "23159_Award_Letter__McDonagh_Demolition_Inc.pdf",
+      "23159_Vendor_Renewal_Letter__AGAE_Contractors__Inc_.pdf",
+      "23159_Vendor_Renewal_Letter__Leopardo_Companies_Inc.pdf",
+      "23159_Vendor_Renewal_Letter__McDonagh.pdf"
+    ]
+  },
+  {
+    "id": "retrieval_008",
+    "type": "retrieval",
+    "question": "Which contracts mention force majeure?",
+    "expected_filenames": [
+      "14234_FULLY_EXECUTED_AGREEMENT_TYLER_7_20_15.pdf",
+      "18194_Fully_Executed_Agreement.pdf",
+      "2023_12_08_Contract_22050_Modification_2_EXECUTED.pdf",
+      "22060_Fully_Executed_Agreement.pdf",
+      "22128_1_Fully_Executed_Agreement.pdf",
+      "22128_2_Fully_Executed_Agreement.pdf",
+      "22143_Fully_Executed_Agreement.pdf",
+      "22162_Fully_Executed_Contract.pdf",
+      "23000_Fully_Executed_Agreement.pdf",
+      "23018_Fully_Executed_Agreement_3_16_23.pdf",
+      "23038_Fully_Executed_Agreement.pdf",
+      "23039_Fully_Executed_Agreement.pdf"
+    ]
+  },
+  {
+    "id": "retrieval_009",
+    "type": "retrieval",
+    "question": "Do any contracts mention HIPAA?",
+    "expected_filenames": []
+  },
+  {
+    "id": "judge_001",
+    "type": "judge",
+    "question": "Which contracts have auto-renewal clauses?",
+    "ground_truth": "There is one contract with auto-renewal clause, its contract id is 14234 and vendor name is Tyler Technologies.",
+    "notes": "Should query auto_renewal_flag=true."
+  },
+  {
+    "id": "judge_002",
+    "type": "judge",
+    "question": "Which contracts are up for renewal in 2026?",
+    "ground_truth": "The following contracts are up for renewal in the 2025-2026 cycle. Five contracts expired early in the cycle with no 25-26 renewal letter present: contract 23039 with Christopher B. Burke Engineering expired July 7, 2025 (fixed-term engagement, no renewal options) per 23039_Fully_Executed_Agreement.pdf; contract 21049 with Ciosek Tree Service expired July 18, 2025 per 21049_Contract_Renewal_24_25.pdf; contract 21080 with TGF Enterprises expired July 18, 2025 per 21080_Vendor_Renewal_Letter_24_25.pdf; contract 21058 with Allanson Auto Body expired July 20, 2025 per 21058_Vendor_Renewal_24_25.pdf; and contract 22060 with Advocate Aurora Health expired August 12, 2025 per 22060_Employee_pre_employment_physicals_and_vaccinations_Renewal_Letter_2024_2025_(002).pdf. Eight contracts were renewed into the 25-26 term and expire between late 2025 and mid-2026: contract 21171 with Compassion Funeral Service expires January 13, 2026 per 21171_Contract_Renewal_Letter_25_26.pdf; contract 22162 with Vanguard Archives expires February 21, 2026 per 22162_Contract_Renewal_Letter_25_26.pdf; contract 22007 with Kiesler Police Supply expires March 20, 2026 per 22007_Contract_Renewal_Letter_2025_2026.pdf; contract 23036 with Core & Main expires March 31, 2026 per 2025_01_15__Contract_23036__Renewal_Letter_25_26.pdf; contract 21003 with Evoqua Water Technologies expires April 9, 2026 per 21003__60_Day_Extension.pdf; contract 23018 with Pat Davis Design Group expires April 14, 2026 per 23018_Contract_Renewal_2025_2026.pdf; contract 21018 with DataProse LLC expires May 31, 2026 per 21018_Vendor_Renewal_Letter_25_26.pdf; and contract 23104 with MGT Impact Solutions expires May 31, 2026 per 23104_Renewal_Letter_25_26.pdf. Nine contract lines were renewed into the second half of 2026: contract 23076 with Chicagoland Paving Contractors expires July 10, 2026; contract 22050 with Synagro Central expires September 12, 2026; contract 22053 with Baker Tilly US expires October 16, 2026; contract 22128-1 with Ciorba Group expires October 18, 2026; contract 22128-2 with Clark Dietz expires October 18, 2026; contract 23145 with Mark 1 Landscape expires November 30, 2026; and contract 23159 (JOC umbrella) with AGAE Contractors, Leopardo Companies, and McDonagh Demolition all expire December 31, 2026.",
+    "notes": "SQL on expiration_date between 2026-01-01 and 2026-12-31."
+  },
+  {
+    "id": "judge_003",
+    "type": "judge",
+    "question": "How much are we paying Advocate Medical?",
+    "ground_truth": "Unit-rate contract — no fixed total. Lake County pays based on actual usage per Exhibit A fee schedule. 10% penalty if results not returned within two weeks. Net 30 payment under Illinois Prompt Payment Act. Invoices more than 90 days after service are forfeited.",
+    "notes": "Tests hybrid mode: SQL finds the contract, RAG retrieves rate details from document text."
+  },
+  {
+    "id": "judge_004",
+    "type": "judge",
+    "question": "Show me the top 10 vendors by total contract value.",
+    "ground_truth": "Top 3 are all contract 23159 JOC vendors at $26M each: AGAE Contractors, Leopardo Companies, McDonagh Demolition. Rank 4: Joseph J. Henderson & Son $12,614,625. Rank 5: Manusos General Contracting $7,347,000. Rank 6: CBI Services $6,123,626. Rank 7: Connelly Electric $2,450,000. Rank 8: SunPeak $2,249,300. Rank 9: Powerlink Electric $1,660,290. Rank 10: Wold Architects & Engineers $1,612,508.",
+    "notes": "SQL aggregation on total_contract_value_usd grouped by vendor."
+  },
+  {
+    "id": "judge_005",
+    "type": "judge",
+    "question": "What does the indemnification clause in contract 16069 say?",
+    "ground_truth": "The Consultant agrees to indemnify, save harmless and defend Lake County from any lawsuits, claims, liabilities, losses and expenses including attorney's fees arising from the Consultant's negligent or willful conduct. The indemnity does not apply if the injury was caused by Lake County's own gross negligence or willful conduct.",
+    "notes": "Tests hybrid retrieval of specific clause text."
+  },
+  {
+    "id": "judge_006",
+    "type": "judge",
+    "question": "Which contracts are expiring in the next 12 months and have auto-renewal?",
+    "ground_truth": "None.",
+    "notes": "Compound SQL filter: expiration_date within next 12 months AND auto_renewal_flag=true."
+  },
+  {
+    "id": "judge_007",
+    "type": "judge",
+    "question": "Tell me about contract 23159.",
+    "ground_truth": "JOC umbrella contract awarded to 3 vendors simultaneously: AGAE Contractors, Leopardo Companies, McDonagh Demolition. Original award December 2023 at $2M per vendor. Modification 2 (November 2025) raised per-term value to $6M per vendor with $26M lifetime ceiling. Current term expires December 31, 2026. Used for on-call construction work county-wide.",
+    "notes": "Should return all rows with contract_id=23159."
+  },
+  {
+    "id": "judge_008",
+    "type": "judge",
+    "question": "Which contracts mention force majeure?",
+    "ground_truth": "12 contracts: Tyler Technologies (14234), Veoci/Grey Wall Software (18194), Synagro Central (22050), Advocate Medical (22060), Ciorba Group (22128-1), Clark Dietz (22128-2), Appin Associates (22143), Vanguard Archives (22162), Cotter Consulting (23000), Pat Davis Design Group (23018), HDR Architecture (23038), Christopher B. Burke Engineering (23039).",
+    "notes": "Pure RAG semantic search. Tests breadth of retrieval."
+  },
+  {
+    "id": "judge_009",
+    "type": "judge",
+    "question": "Do any contracts mention HIPAA?",
+    "ground_truth": "None of the contracts in the database explicitly mention HIPAA.",
+    "notes": "Negative retrieval test — model should clearly say no results found, not hallucinate."
+  }
+]

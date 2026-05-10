@@ -1,10 +1,8 @@
 """
-Structured extraction from selected contract PDFs.
+Reads data/selected_contracts.csv, extracts structured fields from each PDF via Claude,
+and writes to Supabase (TEST_MODE=False) or a local CSV (TEST_MODE=True).
 
-Reads selected_contracts.csv, sends each PDF directly to Claude, and extracts
-structured fields. Writes to Supabase (TEST_MODE=False) or a local CSV (TEST_MODE=True).
-
-Usage:
+Run from project root:
     python src/extract_contracts.py
 """
 
@@ -23,8 +21,8 @@ from supabase import create_client, Client
 load_dotenv(Path(__file__).parent.parent / ".env")
 
 BASE_DIR     = Path(__file__).parent.parent
-MANIFEST_CSV = BASE_DIR / "selected_contracts.csv"
-PDF_DIR      = BASE_DIR / "selected_contracts"
+MANIFEST_CSV = BASE_DIR / "data" / "selected_contracts.csv"
+PDF_DIR      = BASE_DIR / "data" / "selected_contracts"
 
 MODEL          = "claude-sonnet-4-6"
 MAX_CONCURRENT = 2
@@ -109,6 +107,7 @@ def normalize_vendor(name: str) -> str:
 
 
 def make_instance_id(contract_id: str, vendor_name: str) -> str:
+    # Stable ID shared across all documents in a contract family (base, amendments, renewals)
     normalized = normalize_vendor(vendor_name)
     slug = "_".join(normalized.split()[:3])
     return f"{contract_id}-{slug}" if contract_id else slug
@@ -149,6 +148,7 @@ async def call_llm(client: anthropic.AsyncAnthropic, pdf_bytes: bytes) -> dict:
     pdf_b64 = base64.standard_b64encode(pdf_bytes).decode("utf-8")
     for attempt in range(MAX_RETRIES):
         try:
+            # tool_choice forces Claude to always call the tool, so response.content[0] is always a ToolUseBlock
             response = await client.messages.create(
                 model=MODEL,
                 max_tokens=1024,
@@ -228,6 +228,7 @@ async def process_document(
             print(f"  ERROR {filename}: {e}")
             return False
 
+    # Lock prevents concurrent writes to Supabase from racing on the same row
     async with lock:
         upsert_row(supabase, build_row(fields, manifest_row, filename))
 
@@ -271,6 +272,7 @@ async def run(manifest: list[dict], supabase: Client):
     total = len(tasks)
     success = 0
 
+    # as_completed lets us print progress as each task finishes rather than waiting for all
     for i, coro in enumerate(asyncio.as_completed(tasks), start=1):
         ok = await coro
         if ok:

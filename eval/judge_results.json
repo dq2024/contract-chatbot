@@ -1,0 +1,86 @@
+{
+  "overall_average": 7.19,
+  "cases": [
+    {
+      "id": "judge_001",
+      "question": "Which contracts have auto-renewal clauses?",
+      "actual_routing": "sql",
+      "factual_score": 10.0,
+      "completeness_score": 10.0,
+      "citation_score": 10.0,
+      "average": 10.0
+    },
+    {
+      "id": "judge_002",
+      "question": "Which contracts are up for renewal in 2026?",
+      "actual_routing": "sql",
+      "factual_score": 5.0,
+      "completeness_score": 6.0,
+      "citation_score": 8.0,
+      "average": 6.33
+    },
+    {
+      "id": "judge_003",
+      "question": "How much are we paying Advocate Medical?",
+      "actual_routing": "sql",
+      "factual_score": 4.0,
+      "completeness_score": 4.0,
+      "citation_score": 9.0,
+      "average": 5.67
+    },
+    {
+      "id": "judge_004",
+      "question": "Show me the top 10 vendors by total contract value.",
+      "actual_routing": "sql",
+      "factual_score": 3.0,
+      "completeness_score": 7.0,
+      "citation_score": 6.0,
+      "average": 5.33
+    },
+    {
+      "id": "judge_005",
+      "question": "What does the indemnification clause in contract 16069 say?",
+      "actual_routing": "rag",
+      "factual_score": 1.0,
+      "completeness_score": 1.0,
+      "citation_score": 10.0,
+      "average": 4.0
+    },
+    {
+      "id": "judge_006",
+      "question": "Which contracts are expiring in the next 12 months and have auto-renewal?",
+      "actual_routing": "sql",
+      "factual_score": 2.0,
+      "completeness_score": 10.0,
+      "citation_score": 10.0,
+      "average": 7.33
+    },
+    {
+      "id": "judge_007",
+      "question": "Tell me about contract 23159.",
+      "actual_routing": "hybrid",
+      "factual_score": 8.0,
+      "completeness_score": 8.0,
+      "citation_score": 9.0,
+      "average": 8.33
+    },
+    {
+      "id": "judge_008",
+      "question": "Which contracts mention force majeure?",
+      "actual_routing": "rag",
+      "factual_score": 8.0,
+      "completeness_score": 8.0,
+      "citation_score": 10.0,
+      "average": 8.67
+    },
+    {
+      "id": "judge_009",
+      "question": "Do any contracts mention HIPAA?",
+      "actual_routing": "rag",
+      "factual_score": 9.0,
+      "completeness_score": 10.0,
+      "citation_score": 8.0,
+      "average": 9.0
+    }
+  ]
+}

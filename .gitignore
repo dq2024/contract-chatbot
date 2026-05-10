@@ -52,8 +52,6 @@ htmlcov/
 *.parquet
 *.h5
 *.hdf5
-selected_contracts/
-selected_contracts_text/
 
 # Logs
 *.log
@@ -74,6 +72,3 @@ logs/
 # Streamlit
 .streamlit/secrets.toml
 
-/data_processing/deprecated
-*.md
-/contracts

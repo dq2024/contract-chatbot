@@ -1,0 +1,387 @@
+AGREEMENT #21119 FOR CONSTRUCTION CONTRACT For LAKE COUNTY 
+
+| : : 
+
+. 
+
+This AGREEMENT is entered into by and between Lake County (“County”) and Wold Architects and Engineers (“Contractor”), 220 North Smith Street, Suite 310, Palatine, IL 60067 
+
+## RECITALS 
+
+WHEREAS, Lake County is seeking a Contractor to provide Architectural/Engineering Design Services for the Consolidated 911 and Emergency Operations Center in Libertyville, Illinois as noted in the Contractor’s proposal dated September 3, 2021 (“Services”); and 
+
+WHEREAS, Contractor has the professional expertise and credentials to provide these Services and has agreed to assume responsibility for this Agreement. 
+
+NOW, THEREFORE, Lake County and Contractor agree as follows: 
+
+## SECTION 1. AGREEMENT DOCUMENTS 
+
+The Agreement Documents that constitute the entire agreement between Lake County and Contractor are in order of precedence: 
+
+- A. This Agreement and all exhibits thereto; and, 
+
+- B. Terms and Conditions identified in SO] #21119 - Architectural/Engineering Design Services for the Consolidated 911 and Emergency Operations Center in Libertyville, Illinois as Exhibit A 
+
+- C. Contractor’s SOI response to SOI #21119 dated August 10, 2021 as Exhibit B D. The Contractor’s proposal and all exhibits thereto, including statement of work, dated September 3, 2021 
+
+## SECTION 2. SCOPE OF WORK 
+
+Work to be performed under this contract will include architect/engineer-of-record services for the design and construction, of the proposed 911, EMA, and ETSB Replacement Facility, including all associated site engineering. The contractor will provide complete A/E services for program verification, design development, preparation of contract documents, public bidding, construction administration, commissioning, and close-out phases of the project. In accomplishing the above responsibilities, the contractor shall exhibit their project team’s capacity and capability to perform the following functions which are integral to the project’s development: 
+
+## Design Services 
+
+- A. The contractor shall be responsible to interview appropriate staff and perform an analysis of space utilization; determine projected requirements for space needs and estimate the impact of trends related to their requirements. It is the responsibility of the contractor to design specifications to accomplish this project within the project budget, in accordance with local, state and federal regulations; FEMA P-320, FEMA P-361, ICC-500, NFPA-1221 standards must be considered. 
+
+- B. The contractor shall enable the stakeholders to visualize the design intent and shall plan on leading site visits to similar facilities in the area to understand lessons learned, best practices, goals, and cautions. 
+
+- C. The contractor shall be responsible for field verification of existing conditions including all utilities to be impacted during the course of this project. 
+
+- D. Program verification with County staff and key stakeholder planning partners as required. 
+
+- E. Systematic and logical preparation of design documents to adequately define the scope and cost of the 
+
+- project. 
+
+- F. Attend meetings with County representatives and others as required to properly communicate the design intent and illustrate sufficient adherence to program requirements, project schedule and budget. 
+
+- G. Preparation of bid documents consisting of drawings and full project specifications for all site and building improvements required for project completion. Bids and Bid Packages to be opened in accordance with the project schedule and Lake County regulations. The contractor shall identify alternates individually in the event that the County needs to reduce the project scope to fall within the construction budget. 
+
+- H. Develop comprehensive design drawings, specifications, and supplemental guidance to allow integration of direct digital controls to an existing County wide enterprise building automation system. (BACNet) . 
+
+- |. Provide comprehensive record documents (drawings and specifications) at the completion of the project. Provide record documents in hard copy as well as BIM/REVIT format. All work product corresponding with the scope of work shall be turned over to the county in both hard copy anda digital format acceptable to the County. Work product includes, but is not limited to, architectural and engineering plans, elevations, perspectives, sections; spread sheets relating to analysis and development of schedules, costs, budgets, implementation, operations, and other reports and recommendations; all presentation material; and all source file information used in completing the scope of work. 
+
+- J. Design facility specific waytinding, branding, and imaging design within their scope of services. K. Coordinate with third party County consultants including, but not limited to, office furnishings and certain aspects of technology implementation. 
+
+- L. Design specialty furniture (i.e... 911 operator consoles) in coordination with user specific technology. M. Update campus wide utility and stormwater master plan. identify current and forecast utility and infrastructure needs. Provide project specific design to ensure adequate capacity and growth potential of these systems. 
+
+- N. Design a whole campus master duct bank ring 
+
+- O. Design a comprehensive project security plan including physical and technological safe guards. 
+
+- P. Provide comprehensive radio and network design services including: network design, provide RF analysis, produce interference studies, distinct data and radio centers. This will include two 75’ towers and interconnection to the existing 150’ tower. 
+
+- Q. Design to include native plantings/drought tolerant plantings. 
+
+- R. Coordinate with the Consortium’s Technology/Dispatching software provider to ensure infrastructure compliance with operational needs for new CAD/RMS/JMS Software platform currently being implemented by the County. 
+
+- S. Design comprehensive AV design services including to operational requirements. 
+
+## Analysis 
+
+- T. Provide site assessment hazards evaluation/analysis and mitigation strategies. U. Perform life cycle analysis for design elements deemed appropriate by the County. At a minimum, this shall include major mechanical, electrical, plumbing and building envelope systems. 
+
+- V. Perform energy efficiency and sustainability analysis. Provide the County a written report with recommendations on certified construction options (LEED, Net-Zero, Etc.). This will include a building wide energy model with operational cost estimates. 
+
+- W. Provide a bird safety analysis, including options for risk mitigation. X. Develop Lake County specific phasing and logistics planning for the relocation of 911 & EOC from their existing to this new construct. Develop general phasing and logistics for a typical consortium member. 
+
+- Y. Assist the County in reviewing available grant options and applicability. 
+
+- Z. Assist the County in determining construction procurement options and making a recommendation for the most appropriate project delivery method for completion of the work. 
+
+## Project Management 
+
+- AA.Assist the County in soliciting construction testing and geotechnical services proposals with recommendations to the County for award of contract. Contractor shall provide recommendations for items to be tested, and quantities of material testing required. 
+
+- BB. Coordinate with utility providers to ensure facility functional requirements are met. 
+
+- CC. Assist the County in modification of radio licensures from existing to new facilities (FCC and FAA). DD.Conduct and attend project meetings during the design phase and construction document phases as required. Provide documentation of the proceedings of the meetings no later than five working days after each meeting. 
+
+- EE. Upon request, attend County Board, Consortium, and Public Hearing meetings. It shall be assumed that attendance will be required at a minimum of two County Board meetings, two Consortium Partner Meetings, and two public hearing meetings associated with the Village of Libertyville review process. 
+
+- FF. Include all consultants necessary to complete the scope of work, provide minutes of coordination meetings held between the A/E and various consultant teams in the execution of the design for review by the County. 
+
+## Bidding 
+
+- GG. Attend and participate in all pre-bid meetings, respond to all questions and prepare addenda as required. Assist the County in developing and reviewing bidder qualifications. 
+
+- HH.Participate in Bid and scope evaluation and due diligence investigation of references of the lowest qualified bidders and provide a written recommendation to the County. 
+
+## Construction Administration 
+
+- Il. Respond to all requests for information (RFI) in a timely fashion. 
+
+- JJ. Participate in pre-construction and pre-installation meetings as required. KK. Provide Construction Administration services through construction completion and Owner occupancy, including weekly construction meetings with associated construction observation. Prepare and distribute reports of site observations. 
+
+- LL. Review shop drawings and submittals, product data, samples, etc. and coordinate with Owner for timely reviews. 
+
+- MM. Provide complete commissioning services as required for thermal, mechanical, plumbing electrical and electronic systems. 
+
+- NN. Provide assistance to the contractor during initial start-up, testing, adjustment, balancing and commissioning of the building systems. 
+
+- OO. Coordinate and manage permit process with all agencies having jurisdiction over the project. Begin permitting dialogue process with local authorities no later than the design development phase. Provide aid to the selected contractors. 
+
+- PP. Provide oversight and compliance for selected building certification (if authorized; LEED, Net Zero, etc...). 
+
+- QQ. Provide oversight of all closeout turnover and compliance on asset information transfer to Facility Operations. This process shall be implemented throughout the duration of the project and specifically address the owners: work order system, room numbering system, wayfinding system, asset management system. 
+
+## Budgeting 
+
+RR. Develop an initial order of magnitude (OM) Budget articulating a turnkey migration of existing 
+
+operations into a new 911 & Emergency Operations Center. This shall be broken out in alignment with Uniformat Level 2 Group Elements (ie... foundations, superstructure, exterior enclosure, etc.). This shall also include budgets for non-construction related relocation expenses. The Design Team shal! provide this at the onset of the project. 
+
+- SS. Provide three independent cost estimates in a format requested by the County: one during Design Development, one at 50% and one at 100% completion of Construction Documents (pre-bid) for review by the County. . 
+
+- TT. Develop a comprehensive Project Budget and Design Element Authorization Plan. A protocol will need to be developed to tie key design decisions to budget commitments by the County and impact to the OM Budget. These decisions will be authorized internal to the SD, DD, and CD deliverable milestones and may require an internal stakeholder review and approval period prior to providing the designer authorization to continue. This will require refinement by the design team and estimator throughout the design process. Design decisions and their relative financial impact must be planned in advance. Please note this requirement is in addition to the independent (3 party) cost estimates identified above. 
+
+- UU. In coordination with Lake County Project Management, develop a project business plan that includes initial cost offsets based on future Consortium lease agreements. 
+
+- VV. Provide a constructability analysis including: design attributes a-typical for projects of similar type, value engineering concepts and associated budgets, means and methods plan review and commentary, cost forecast by CSI division and major design attribute. Constructability analysis shall be provided alongside each of the three primary cost estimates identified in “RR”. 
+
+## SECTION 3. DURATION 
+
+This Agreement shall be effective as of the date Lake County gives Contractor notice to proceed, and unless terminated pursuant to Section 18 shail be effective until the date the work is complete. 
+
+The work is complete upon a determination of completion by Lake County. A determination of completion: shall not constitute a waiver of any rights or claims which Lake County may have or thereafter acquire with respect to any provision of this Agreement. 
+
+At the end of the Agreement term Lake County reserves the right to extend the Agreement for an additional period up to sixty (60) days. 
+
+The project development timeline has been agreed upon by all parties as follows: 
+
+## SECTION 4. AGREEMENT PRICE 
+
+Lake County will pay to the Contractor $1,612,508 and shall make periodic payments to Contractor based upon actual progress within 30 days after receipt and approval of invoice. Said payments shall not exceed the amounts shown in the following schedule, and full payments for each task shall not be made until the task is completed and accepted by Lake County. 
+
+**==> picture [559 x 555] intentionally omitted <==**
+
+**----- Start of picture text -----**<br>
+|||||||||||
+|---|---|---|---|---|---|---|---|---|---|
+|||Phase||ScopeofServices|||ee|
+|||||PD||ArchitectofRecordServices Basic|
+|82D|
+||__| Reimbursables Allowance||S|829,406|
+||_| itemRR-Develop|initial|OM Budget|||85000|
+||__|T9028 Subtotal-Programming|
+||__|8A ReimbursablesAllowance|
+||||__| Item|C—Existing|conditions verification*|||$33,750|
+||||__||[itemY-GrantOptionsReview]|||See|Owner Allowance _||
+||__|||DD|||[Subtotal-SchematicDesign]|BasicArchitect|of Record|Services|||||«$220,061886,918|
+||__|||ReimbursablesAllowance|86TH|
+||_||__||||UpdatepuD Item|K~Furniture Vendor|Coordination|=|See OwnerOO Allowance|
+|Item|M|—|Update|Campus|Wide|Utility|and|
+|po|Itemt-Design SpecialtyFurniture|||85,000|
+|fr|e|Item|N|—|DesignnaresCampus|Master|Duct|Bank|(DDe$12,500|
+||__||tem P—-Radioand|Network DesignServices|||$70,813|
+|[ectionNONEItem|R — Technology/Dispatch|Software|Vendor|$12,500|
+||__||Item$S-Comprehensive|AV Design Services|||$245,188|
+|||EOCItem XRelocation — Phasing** and Logistics Planning for 911 &|
+||__||ItemV~Energy Analysisand Modeling|||$80,000|
+||__||tem|CC= Modification of|RadioLicenses|||S800|
+||__| Item|UU - Coordinate|to|Develop|Business|Plan|||See|Owner Allowance _||
+|fetesANertDesenseweesRequired|ee|
+||__||Subtotal-Design Development|||$740,597|
+||__||__|||Allowance|[ItemJ—WayfindingDesign]|Reimbursables|=|STA87,500|
+||__| Subtotal-ContractTotal|forthe|above describDocum|e|ntsdservices||S|S|8,613,508$593,822|
+
+**----- End of picture text -----**<br>
+
+
+Subsequent services as described below will be approved by the appropriate Lake County staff and/or the appropriate Lake County Board Committee and executed as an Amendment to this Agreement. Additional Scope of Work is valid until November 30, 2024 for the cost of $732,432. If the County elects to contract for these additional services after this date Lake County will negotiate the final scope and cost. The parties agree to use the terms and conditions of this Agreement as a framework for any subsequent services. 
+
+**==> picture [496 x 233] intentionally omitted <==**
+
+**----- Start of picture text -----**<br>
+Phase | Scope of Services Fee<br>| | Reimbursables Allowance $2,054 |<br>CA Basic Architect of Record Services *** $11,297<br>building certification<br>| etrrgarcs = eetonslConsusien Admin ents<br>|_| Subtotal-as Required Construction Administration =| $427,621<br>|__|T8895 Reimbursables Allowance<br>|_| term MM = Complete Commissioning Services ***** | $101,000<br>| __[Subtotal-Close-outItem QQ - Oversight of Closeout Turnover **** 825248$40,000<br>|__| Total forthe above described services | $782,482<br>**----- End of picture text -----**<br>
+
+
+* item C includes a topographic survey for the project limits shown on the Phase 1 predesign site plans, plus an additional 25' on the east side of the site (approximately 25 acres). This price is based on any area that is currently being farmed having been harvested at the time of the survey. Should the County require a survey of the entire campus (beyond the project limits of the 911/EOC building) that would pick up all buildings, hardscapes, detention basins and utilities (sanitary, storm and watermain); this scope could be added to the above for an additional fee of $89,250. Cost includes private utility locate for all dry utilities but does not include exposing all the dry utilities for depth. There is no way to estimate that number without knowing how many locations would be exposed. 
+
+** Item X includes creating a single migration plan for Lake County Sheriff's office dispatch and EOC. If additional migration plans are required, a separate fee will be proposed. Item X also excludes execution/management of the developed migration plans. A fee for this service cannot be quantified until the number and types of migrations are defined. *** Construction Administration Services exclude NPDES inspections/site observations during construction. A budget of approximately $33,600 for a 18 month construction period is recommended, and should be carried by the County as a County Expense. **** Item | and Item QQ include design phase and construction administration phase services coordination with Lake County FCS to establish protocols/work plan for managing COBie/HOBO (or similar) process for handover of complete building information (MEP, doors, security, BAS systems, etc.) in County's identified format. Cost also includes an as built survey for the project site including detention pond, volume control, and stormwater utilities. 
+
+***** Itam MM includes building envelope/enclosure commissioning, as well as full MEP systems commissioning. 
+
+## SECTION 5. INVOICES & PAYMENT 
+
+- A. A purchase order will be issued for the work and Contractor shall submit invoice(s) detailing the products and services provided and identify the purchase order number on all invoices. 
+
+- B. The Contractor shall submit invoices detailing the services performed in accordance with the payment provisions of this Agreement. The Contractor may submit invoices for work performed on a monthly basis up to the level of each deliverable less a 10% holdback until each deliverable is completed and accepted by the County. Holdback will be reduced from 10% to 5% at the County’s acceptance on the Contract Documents (CD) Phase. Furthermore, the amount of the retainage will 
+
+| : : : 
+
+be reduced from 5% to 0%, no later than 60 days from the date of substantial completion. Full payment shall be due upon final project acceptance by the County. 
+
+- C. The Contractor shall maintain records showing actual time devoted and cost incurred. Contractor shall permit a representative from Lake County to inspect and audit all data and records of Contractor for work and/or services provided under this Agreement. Contractor shall make these 
+
+- records available at reasonable times during the Agreement period and for one year after the termination of this Agreement. 
+
+- D. All payments shall be made in accordance with the Illinois Local Government Prompt Payment Act (50 ILCS 505/1 et seq.). 
+
+## SECTION 6. CHANGE ORDERS 
+
+In the event changes to the Scope of the project and/or additional work become necessary or desirable to the parties, the parties shall follow the procedures set forth in this Section. A Change shall be effective only when documented by a written, dated agreement executed by both parties which expressly references this Agreement (a “Change Order”). The Change Order shall set forth in detail: (i) the Change requested, (ii) the reason for the proposed Change; (iii) the cost of the Change; and (iv) the impact of the Change on time for completion of the project. 
+
+In the event either party desires a Change, the Project Manager for such party shall submit to the other , party’s Project Manager a proposed Change Order. If the receiving party does not accept the Change Order in writing within ten (10) days, the receiving party shall be deemed to have rejected the Change Order. If the parties cannot reach agreement on a proposed Change, Contractor shall nevertheless continue to render performance under this Agreement in accordance with its (unchanged) terms and conditions. 
+
+Changes that involve or increase in the amounts payable by the County may require execution by the County Purchasing Agent. Some increases may also require approval by the County Board. In those cases where the County Purchasing Agent’s signature is required, or County Board approval is needed, the Change Order shall not be deemed rejected by County after ten (10) days provided the Project Manager has indicated in writing within the ten (10) day period of his intent to present the Change Order for appropriate signature or approval. 
+
+## SECTION 7. CONSTRUCTION MEANS 
+
+Lake County shall not have control over or charge of and shall not be responsible for construction means, methods, techniques, sequence, or procedures, or for safety precautions and programs in connection with the construction, unless specifically identified in the Scope of Services. 
+
+SECTION 8. PREVAILING WAGE ACT ‘ To the extent that the Illinois Prevailing Wage Act applies, Contractor shall pay and require every subcontractor to pay prevailing wages as established by the Illinois Department of Labor for each craft or type of work needed to execute the Agreement in accordance with 820 ILCS 130/.01 et seq. Contractor shall prominently post the current schedule of prevailing wages at the project site and shall notify all of its subcontractors immediately in writing of all changes in the schedule of prevailing wages. Any increase in cost to Contractor due to changes in the prevailing rate of wage during the term of this Agreement shall be at the expense of Contractor and not at the expense of Lake County. If any Change Orders are effectuated, the Change Order shall be computed using the prevailing wage rates applicable at the time the Change Order work is scheduled to be performed. Contractor shall be solely responsible to maintain accurate records as required by the prevailing wage statute and to obtain and furnish all such certified records to Lake County as required by said statute. Contractor shall be solely liable for paying the difference between prevailing wages and any wages actually received by laborers, workmen, and/or mechanics engaged in the 
+
+Work and in every way defend and indemnify Lake County against any claims arising under or related to the payment of wages in accordance with the Prevailing Wage Act. The Illinois Department of Labor publishes the Prevailing Wage rates on its website. The Department revises the prevailing wage rates and Contractor (or, as applicable, subcontractor) has an obligation to check the Department’s web site for revisions to the Prevailing Wage rates. For information regarding current prevailing wage rate, please refer to the Illinois Department of Labor’s website. 
+
+## SECTION 9. INDEMNIFICATION 
+
+Contractor agrees to indemnify, save harmless, and defend Lake County, its agents, servants, and employees, and each of them against and hold it and them harmless from any and all lawsuits, claims, demands, liabilities, losses, and expenses, including court costs and attorney’s fees, for or on account of any injury to any person, or any death at any time resulting from such injury, or any damage to property, which may arise or which may be alleged to have arisen out of or in connection with the work covered by this Agreement caused directly by the negligence or willful or wanton conduct of Contractor. The foregoing indemnity shall apply except if such injury, death, or damage is caused directly by the gross negligence or willful or wanton conduct of Lake County, its agents, servants, or employees or any other person indemnified hereunder. 
+
+To the fullest extent permitted by law, Contractor waives any rights of contribution against Lake County and shall indemnify and hold harmless Lake County from and against any claims arising out of or resulting from performance of Contractor’s Work under this Agreement which is caused in whoie or in part by the negligent acts or omission of Contractor. 
+
+## SECTION 10. INSURANCE 
+
+The Contractor must obtain, for the Contract term and any extension of it, insurance issued by a company or companies qualified to do business in the State of Illinois with an A.M. Best Rating of at least A-and provide the County with a Certificate of Insurance 15 days before the start of the project, and thereafter annually for contracts/ projects that will last more than one year. Insurance in the following types and amounts is necessary and/or where applicable: 
+
+## Commercial General Liability Insurance 
+
+In a broad form on an occurrence basis shall be maintained, to include, but not be limited to, coverage for property damage, bodily injury (including death), personal injury and advertising injury in the following coverage forms where exposure exists: 
+
+*Premises and Operations 
+
+«Independent Contractors 
+
+* Products/Completed Operations — up to 2 years after each project completion « Liability assumed under an Insured Contract/ Contractual! Liability * Personal Injury and Advertising Injury 
+
+With limits of liability not less than: 
+
+S 1,000,000 Each Occurrence 
+
+S$ 1,000,000 Products-Completed Operations 
+
+S 1,000,000 Personal and Advertising injury limit 
+
+S 2,000,000 General aggregate; the CGL policy shall be endorsed to provide that the General Aggregate limit applies separately to each of the contractor’s projects away from premises owned or rented to contractor. 
+
+## Automobile Liability Insurance 
+
+Automobile liability insurance shall be maintained to respond to claims for damages because of bodily injury, death of a person, or property damage arising out of ownership, maintenance, or use of a motor vehicle. This policy shall be written to cover any auto whether owned, leased, hired, or borrowed. The Contractor’s auto liability insurance, as required above, shall be written with limits of insurance not less than the following: 
+
+$ 1,000,000 Combined single Limit (Each Accident) 
+
+## Excess/ Umbrella Liability (if applicable) 
+
+The Contractor’s Excess/ Umbrella liability insurance shall be written with the umbrella follow form and outline the underlying coverage, limits of insurance will be based on size of project: $ 2,000,000 per occurrence limit (minimum, and may be higher depending on the project) 
+
+## Workers Compensation (Coverage A) and Employers Liability (Coverage B) 
+
+Workers Compensation Insurance covering all liability of the Contractor arising under the Worker’s Compensation Act and Worker’s Occupational Disease Act at limits in accordance with the laws of the State of Illinois. Employers’ Liability Insurance shall be maintained to respond to claims for damages because of bodily injury, occupational sickness, or disease or death of the Contractor’s employees, with limits listed below: 
+
+## Employers Liability 
+
+a) Each Accident $1,000,000 
+
+b) Disease-Policy Limit $1,000,000 
+
+c) Disease-Each Employee $1,000,000 
+
+Such Insurance shall contain a waiver of subrogation in favor of Lake County. 
+
+Contractor’s Pollution Liability (if applicable) 
+
+The Contractor’s pollution liability insurance, in connection with an agreement, shall be written with limits of insurance not less than the following: 
+
+S 1,000,000 per occurrence limit 
+
+## Installation Floater / Builders Risk (if applicable) 
+
+Contractor’s builders risk/an installation floater should cover materials while stored on-site and installation until the project has been completed or put to its intended use. 
+
+Limit would be determined by the hard construction values of the project including materials, the cost of change orders and overhead and profit. 
+
+## Professional Liability — Errors and Omissions (if applicable) 
+
+The Contractor’s Architect/ Engineer/Consultants for the plans of the project shall be written with limits of insurance not less than the following: 
+
+$ 1,000,000 per claim per policy year 
+
+Coverage shall be provided for up to three (3) years after project completion. Policy is to be on a primary basis if other professional liability is carried. 
+
+## Liability Insurance Conditions 
+
+Contractor agrees that with respect to the above required insurance: 
+
+- a) The CGL policy shall be endorsed for the general aggregate to apply on a “per Project” basis; 
+
+- b) The Contractor's insurance shall be primary & non-contributory over Lake County's insurance in the event of a claim. 
+
+- c) Contractor agrees that with respect to the above required insurance, Lake County shall be named as additional insured, including its agents, officers, and employees and volunteers and be provided with thirty (30) days’ notice, in writing by endorsement, of cancellation or material change. A blanket additional insured ISO endorsement is preferred for Contractors who have multiple projects with the County. 
+
+- d) Lake County shall be provided with Certificates of Insurance and the appropriate corresponding ISO form endorsements evidencing the above required insurance, prior to commencement of this Contract and thereafter with certificates evidencing renewals or replacements of said policies of insurance at least thirty (30) days prior to the expiration of cancellation of any such policies. No manuscript endorsements will be accepted. Any hard copies of said Notices and Certificates of Insurance and Endorsements shall be provided to: 
+
+## Lake County 
+
+Purchasing Division 
+
+18 N. County 9th Floor Waukegan, Illinois 60085 Attn: RuthAnne Hall, Lake County Purchasing Agent 
+
+- e) Electronic copies of Notices, Certificates of Insurance and Endorsements can be emailed to Purchasing @lakecountyil.gov in place of hard copies. 
+
+Failure to Comply: In the event the Contractor fails to obtain or maintain any insurance coverage required under this agreement, Lake County may purchase such insurance coverage and charge the expense to the Contractor. 
+
+## SECTION 11. INDEPENDENT CONTRACTOR 
+
+Contractor is defined and identified as an independent contractor, not an employee or agent of Lake County and the County has no right to control or direct Contractor’s manner, detail, or means by which Contractor accomplishes tasks under this Agreement. 
+
+## SECTION 12. DISPUTE RESOLUTION 
+
+All issues, claims, or disputes arising out of this Agreement shall be resolved in accordance with the Appeals and Remedies Provisions in Article 9 of the Lake County Purchasing Ordinance. 
+
+## SECTION 13. NO IMPLIED WAIVERS 
+
+The failure of either party at any time to require performance by the other party of any provision of this Agreement shall not affect in any way the full right to require such performance at any time thereafter. Nor shall the waiver by either party of a breach of any provision of this Agreement be taken or held to be a waiver of the provision itself. 
+
+## SECTION 14. SEVERABILITY 
+
+If any part of this Agreement shall be held to be invalid for any reason, the remainder of this Agreement shall be valid to the fullest extent permitted by law. 
+
+## SECTION 15. JURISDICTION, VENUE, CHOICE OF LAW AND PROFESSIONAL STANDARDS 
+
+) 
+
+This Agreement shall be governed by and construed according to the laws of the State of Illinois. Jurisdiction and venue shall be exclusively found in the 19th Judicial Circuit Court, State of Illinois. 
+
+## SECTION 16. NOTICES AND COMMUNICATIONS 
+
+: All notices and communications which may be given by Lake County to Contractor relative to this | Agreement shall be addressed to Contractor at the address shown herein below: 
+
+## Matt Bickel 
+
+Wold Architects and Engineers 220 N. Smith Street; Suite 310 Palatine, IL 60067 847-2341-6100 
+
+Copies of any notices and communications which propose to alter, amend, terminate, interpret, or otherwise change this Agreement shall be provided to: Lake County Purchasing Division, 18 North County Street, Waukegan, Illinois 60085-4350; Attention: Purchasing Agent. 
+
+## SECTION 17. ASSIGNMENT, ALTERATIONS AND MODIFICATIONS 
+
+Except as otherwise provided herein, this Agreement shall not be assigned, delegated, altered, or modified without the express written consent of both parties. This Agreement supersedes any and all other agreements, oral or written, between the parties hereto with respect to the subject matter hereof. 
+
+To the extent Lake County agrees to an assignment, delegation, or subcontract by Contractor, Contractor shall remain liable to Lake County with respect to each and every item, condition and other provision hereof to the same extent that Contractor would have been obligated if it had done the work itself and no assignment, delegation, or subcontract had been made. 
+
+## SECTION 18. TERMINATION 
+
+Lake County reserves the right to terminate this Agreement, or any part of this Agreement, with or without cause, upon thirty (30) days written notice. In case of such termination, Contractor shall be entitled to receive payment from Lake County for work completed to date in accordance with the terms and conditions of this Agreement. 
+
+In the event that this Agreement is terminated due to Contractor’s default, Lake County shall be entitled to purchase substitute items and/or services elsewhere and charge Contractor with any or all losses incurred, including attorney's fees and expenses. 
+
+## SECTION 19. CONFIDENTIALITY 
+
+Both parties acknowledge that Contractor’s documents and dealings related to this Agreement are subject to the Illinois Open Meetings Act (5 ILCS 120/1 et seq.) and the Illinois Freedom of Information Act (5 ILCS 140/1 et seq.). 
+
+## SECTION 20. WORK PRODUCT 
+
+All work product prepared by Contractor pursuant to this Agreement, including, but not limited to, policies, reports, analysis, plans, designs, calculations, work drawings, studies, photographs, models, and recommendations shall be the property of Lake County. Contractor shall deliver the work product to Lake County upon completion of Contractor’s work, or termination of the Agreement, whichever comes first. 
+
+Contractor may retain copies of such work product for its records; however, Contractor may not use, print, share, disseminate, or publish any work product related to this Agreement without the consent of Lake County. 
+
+## SECTION 21. NEWS RELEASES 
+
+Contractor may not issue any news releases regarding this Agreement without prior approval from Lake County. 
+
+IN WITNESS HEREOF, the undersigned have caused this Agreement to be executed in their respective names on the dates hereinafter enumerated. 
+
+**==> picture [315 x 129] intentionally omitted <==**
+
+**----- Start of picture text -----**<br>
+ake-County: Architect:<br>Ruthanne Hall / Matt Bickel<br>Purchasing Agent Partner<br>Lake County Wold<br>Date lol 3 202 | Date 9-14-2021<br>**----- End of picture text -----**<br>
+
+

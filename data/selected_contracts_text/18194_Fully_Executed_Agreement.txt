@@ -1,0 +1,486 @@
+: 
+
+## Lake County, IL 
+
+Prepared for: Yvette Albarran 
+
+Prepared by: Mark Demski Date: October 11, 2018 Proposal number: GWS77223962 
+
+October 11, 2018 
+
+|“, Proposal No. GWS77223962 | veoc Grey Wall Software LLC, 195 Church Street 14th Floor, New Haven, CT 06510 
+
+**==> picture [444 x 30] intentionally omitted <==**
+
+**----- Start of picture text -----**<br>
+“GREY Mmm SOFTWARE,LLC NS<br>**----- End of picture text -----**<br>
+
+
+## Yvette Albarran 
+
+Lake County, IL Purchasing Division 18 North County Street, 9% Floor Waukegan, IL 60085-4350 
+
+Dear Yvette: 
+
+Grey Wall Software, LLC (“Grey Wall”) is pleased to offer Lake County, IL this proposal and agreement (this “Quote”) for the use of Grey Wall’s Veoci software and the services described herein (the “Services”). 
+
+|. Scope, Term and Terms and Conditions 
+
+The Services will be available to Lake County, IL from December 1, 2018 through November 30, 2019 (the “Term”) in exchange for the fees described in Article III below, and pursuant to the terms of Veoci’s Subscription Terms and Conditions, Service Level Agreement and Support Agreement (collectively, the “Subscription Terms”) which are attached hereto as Exhibit A, Exhibit B, and Exhibit C. This Quote incorporates the Subscription Terms in all respects, and together, this Quote and the Subscription Terms constitute the agreement between the parties. 
+
+The fees and terms offered herein are contingent upon execution and delivery to Grey Wall of a signed acceptance of this quote within thirty (30) days from the date of this Quote, otherwise this Quote shall be deemed null and void. In the event that Grey Wall countersigns this Quote, the foregoing sentence shall not be deemed to apply. 
+
+## A. Software as a Service (“SaaS”) 
+
+## 1. Applications Lake County, IL plans to use Veoci to manage emergencies and run drills in preparation for emergencies. 
+
+2. Number of Users During the Term, Lake County, IL is permitted to register a maximumoffour hundred (400) identities as Veoci users. Subject to the Subscription Terms and the confidentiality obligations described in Article IV below, Lake County, IL may permit independent contractors and Lake County, IL clients to use the Services for Lake County, IL needs. 
+
+3. Document Storage Grey Wall will provide up to 100 GB (gigabytes) of online storage of documents, photos, and other electronic documentation (“Documents”) to Lake County, IL. 
+
+4, Integrated Telephone & SMS Capability Veoci service includes the capability to automatically send and receive SMS and to dial global phone numbers as needed and also use text to speech conversion to read out messages. The SMS and phone calls from Veoci connect with users who may not be on-line and whose participation is urgently needed. Veoci integrates this service from a 3"4 party supplier and charges can vary based on target country and type of connection. Domestic service to the US is included in the pricing; international calling to other countries is excluded. 
+
+LE) “2,)) Proposal No. GWS77223962 | veoci © Grey Wall Software LLC, 195 
+
+195 Church Street 14th Floor, New Haven, CY 06510 
+
+| | | 
+
+| | 
+
+' i ; 
+
+## B. Support and Training 
+
+1. Software Enhancements Grey Wall will provide maintenance, support, and periodic enhancements to the Services pursuant to the smallSubscriptionand designed Terms.toTypically,make theGreyintroduction Wall push **e** asy.s enhancementsA monthly sessionout in ais twpr **o** vided-weekatcycle;no additionalthese changescost arein a webinar format for customers to learn about the new features and leverage them in their work. 
+
+| 
+
+## 2. Training 
+
+## Definitions: 
+
+“Administrators” are staff who will design and edit the Veoci system to build or maintain solutions/applications “End Users” means people who will be utilizing the system functionally 
+
+Two-day Administrator training sessions (Boot Camp Trainings) are typically scheduled monthly at our offices in New Haven and at locations around the US. The fee is $950 per person. We also offer on-site Boot Camp sessions by arrangement. The price for an on-site Training Session for a minimum of eight (8) attendees is $950 each per person plus T&L for the trainer. We recommend administrators to attend Boot Camp Trainings, as they will be responsible for training End-Users. 
+
+Remote Administrator Trainings are also available. These trainings are similar to an on-site training but will exclude class exercises. Also, the content of Remote Trainings will vary slightly due to the changed medium and will be set up as multiple 90-minute sessions. These Remote Administrator Trainings and additional training sessions both on-line and on-site, are available at Grey Wall’s standard professional service rates. 
+
+## il. Financial Specifications 
+
+. 
+
+## A. Fees & Term 
+
+Recognizing the value of Lake County, IL as a customer, Grey Wall offers Lake County, IL the following fees for the term specified in paragraph one ofthe Scope section of[this][Proposal:] 
+
+|Reoccurring Services and Fees:||||
+|---|---|---|---|
+|Software Subscription forVeoci||$|72,000.00|
+|Maintenance/Updates||$|0.00|
+|Support<br>Hosting||$ $|0.00<br>0.00|
+||Sales Tax||0.00*|
+||TOTAL:|$|72,000.00|
+
+
+
+*Plus, Applicable Sales Tax 
+
+B. Optional Services if requested 
+
+|“2,| Proposal No. GWS77223962 LZ) wwwveocicom | mark.demski@greywallsoftwarecom | 813-915-1946 eee,| Grey Wall Software LLC, 195 Church Street 14th Floor, New Haven, CT 06510 
+
+. 
+
+**==> picture [443 x 11] intentionally omitted <==**
+
+**----- Start of picture text -----**<br>
+(moc. Bee Ne eelccl CN<br>**----- End of picture text -----**<br>
+
+
+**==> picture [408 x 165] intentionally omitted <==**
+
+**----- Start of picture text -----**<br>
+Standard Training and Consulting for 2018, and subject to change<br>Item Unit Price<br>Veoci Hosted Bootcamp (New 2 Days - Price per $950, attendee pays for<br>Haven, CI or other locations) attendee travel and expense<br>$950, client pays for<br>2 Days — Price per trainer’s travel and<br>Client Hosted Bootcamp attendee (Min 8) expense<br>Custom Training $180<br>Professional Services &<br>Consulting Hourly $180<br>Travel & Expense (Without Air) $250<br>**----- End of picture text -----**<br>
+
+
+## Wl. Confidentiality 
+
+Lake County, IL shall not, without the prior written consent of Grey Wall, disclose publicly or to any third party (excluding employees of Lake County, IL with a need to know), the terms and conditions of this Quote or any related negotiations between the parties, except to the extent required by law. 
+
+## IV. Exhibits A, B and C 
+
+## A. Subscription Term and Conditions 
+
+## 1 Definitions 
+
+“Agreement” means these Subscription Terms and Conditions and any Order Form between the Customer and Grey Wall and such Agreement, shall be effective as of the effective date of the applicable Order Form. 
+
+"Confidential Information” means any information, maintained in confidence by the disclosing party, communicated in written or oral form, marked as proprietary, confidential or otherwise so identified, and any information that by its form, nature, content, or mode of transmission, a reasonable recipient would understand to be confidential or proprietary. Notwithstanding anything to the contrary, the Veoci Program and related documentation and the Service are Confidential Information of Grey Wall. 
+
+“Customer” means any customer who is party to an Order Form, Contract, or agreement for Veoci SaaS with Grey Wall. 
+
+“Customer Data” means all electronic data or information provided by Customer to the Service. “Grey Wall” means Grey Wall Software, LLC. 
+
+|“ ,| Proposal No. GWS77223962 
+
+| veoci | Grey Wall Software LLC, 195 Church Street 14th Floor, New Haven, CT 06510 
+
+. : : : i 
+
+“Order Form” means the order form or quote for Services entered between Grey Wall and Customer, including any exhibits or schedules thereto. 
+
+“Primary Contact” means Customer’s primary technical contact with Grey Wall in-connection-with the Service. 
+
+“Service” means Greyy Wall’s pprovision of the Veoci Programg for access and use byy Customer via http://veoci.com. 
+
+“User Guide” means the online Veoci Program user manuals for the Service accessible via http://veoci.com, as updated by Grey Wall. 
+
+“Users” means the individuals who are authorized to access and use the Service and who have been provided user identifications and passwords by Customer (or by Grey Wall at Customer's request). Users may be Customer employees, Customer third party consultants, contractors or agents. (Third parties may access and use the Service solely for the benefit of Customer’s internal business purposes in accordance with the provisions of this Agreement.) 
+
+| 
+
+"Veoci Program” means Grey Wall’s virtual emergency operations center software program for team communication and collaboration. 
+
+, 
+
+“Virus” (i) any computer code designed to disrupt, disable, harm, or otherwise impede the operation of the Service, including Customer’s access to the Service and processing of data using the Service, or the operation of any associated system or network, or {ii) any other similar harmful, malicious, or hidden procedures, routines, or mechanisms that would cause the Service to malfunction or cause damage to or corruption of data, storage media programs, equipment or communications, or otherwise interfere with operations. 
+
+2 Provision of Service : (a) Grey Wall will provide the Service to Customer in accordance with the terms ofthis Agreement. Grey Wali grants Customer a non-transferable and nonexclusive right to access and use the Service for the sole purpose of supporting the internal operations of Customer’s business and to process Customer’s own data. 
+
+- (b) The following procedures will apply to the Service: 
+
+   - (i) Grey Wall will send an email to Customer's Primary Contact setting forth the information necessary for initial use of the Service. Customer shall provide the information requested in such email to Grey Wall. 
+
+   - (ii) Grey Wail will provide Service status and maintenance notifications by email to Customer's Primary Contact. 
+
+; 
+
+- (iii) Customer will notify Grey Wall via email at support@veoci.com with respect to any issues 
+
+- related to the Service. 
+
+(c) From time to time, with respect to the Service and at an additional fee, Grey Wall may offer additional functionality. Such additional functionality will be offered and agreed under a separate agreement between the parties. Customer hereby agrees that Customer's purchase of the Service pursuant to this Agreement is neither contingent on the delivery of any future functionality or features nor dependent on any oral or written public comments made by Grey Wail regarding future functionality or features. 
+
+(d) The Service may be accessed and used solely by a User whose identification and password may not 
+
+| “a | Proposal No. GWS77223962 |Voge| Grey Wall Software LLC, 195 Church Street 14th Floor, New Haven, CT 06510 
+
+**==> picture [88 x 14] intentionally omitted <==**
+
+**----- Start of picture text -----**<br>
+Le LA<br>**----- End of picture text -----**<br>
+
+
+## eelllr COON 
+
+be shared, accessed or used by any other person, company or entity. Unless otherwise specified in the applicable Order Form between the Customer and Grey Wall, (i) Services are purchased as User subscriptions and may be accessed by no more than the specified numberofUsers, (ii) additional User subscriptions may be added during the applicable subscription term at the same pricing as that for the pre-existing subscriptions thereunder, prorated for the remainder of the subscription term in effect at the time the additional ser subscriptions are added, and (iii) the added User subscriptions shall terminate on the same date as the pre-existing subscriptions. User subscriptions are for designated Users only and cannot be shared or used by more than one User but may be reassigned to new Users replacing former Users who no longer require ongoing use of the Services. 
+
+## 3 Limitationsand Processes 
+
+(a) Third-party interfaces, software, hardware or other services which are associated with, or otherwise available through the Service shall be accessed and used by Customer and Users in their sole discretion. Grey Wall shall have no responsibility or liability with respect to Customer's or any Users’ access to or use of any such items or for any act or omission of any such third-party provider. 
+
+(b) Grey Wall’s performance under this Agreement shall be excused as a result of Customer’s (i) failure to comply with its obligations as set forth herein; (ii) failure to provide Grey Wall with information reasonably deemed by Grey Wall to be necessary to assist Grey Wall in its performance under this Agreement; or {iii) delay, prevention or interference with Grey Wail’s performance under this Agreement. 
+
+(c) During normal business hours and no more than twice per year, on reasonable advance notice, describing the purpose and scope of[the][request][ and][in][a][ manner][ that][ does][not][ unreasonably][interfere][ with] Customer’s business operations, Grey Wall or a Grey Wall-designated third-party may audit Customer’s use of and access to the Service to verify Customer’s compliance with this Agreement. 
+
+## 4 Customer Responsibilities. 
+
+(a) Customer will provide Grey Wall with the contact details for its Primary Contact on the effective date of this Agreement, and will notify Grey Wall of any changes as necessary on an ongoing basis. Customer is responsible for having the hardware and software adequate for use of the Service. 
+
+(b) Customer is responsible for all activities that occur in, or are related to, User accounts and for Users’ compliance with this Agreement. Customer shall: (i) have sole responsibility for the accuracy, quality, integrity, legality, reliability, and appropriateness of all Customer Data; (ii) prevent unauthorized access to, or use of, the Service, and shall notify Grey Wall promptly of any unauthorized access or use; and (iii) comply with all applicable local, state, federal and territorial laws and regulations (“Laws”) in accessing and using the Service. 
+
+(c) Customer shall use the Service solely for its internal business purposes as contemplated by this Agreement and shall not: (i) license, sublicense, sell, resell, rent, lease, transfer, assign, distribute, time share or otherwise commercially exploit or make the Service available to any third party, other than to Users or as otherwise contemplated by this Agreement; (ii) send spam or otherwise duplicative or unsolicited messages in violation of applicable Laws; (iii) send or store infringing, obscene, threatening, or otherwise unlawful material that is harmful to children or violates third party privacy rights; (iv) interfere with or disrupt the 
+
+7“, Proposal No. GWS77223962 
+
+| veoct | Grey Wall Software LLC, 195 Church Street 14th Floor, New Haven, CT 06510 
+
+i i 
+
+integrity or performance ofthe Service or the data contained in the Veoci Program; (v) use the Service to store or transmit any Viruses, (vi) attempt to gain unauthorized access to the Service or its related system or networks, or (vii) monitor the availability, performance or functionality of the Services, or access the Services for any other benchmarking or competitive purposes. 
+
+Laws. Customer represents to Grey Wall that: (i) it will provide only that personal data that it is authorized to (d) Customer is responsible for its compliance with all applicable data protection and privacy protection provide to Grey Wall, and will do so lawfully in compliance with applicable Laws, (ii) Grey Wall or its subcontractors may process such data for the purposes described in this Agreement, and (iii) Grey Wall may disclose such data to its subcontractors for this purpose. 
+
+(e) Customer shall not access the Services, and Grey Wall may immediately terminate this Agreement, if Grey Wall determines, in its reasonable discretion, that Customer is a competitor of Grey Wall. 
+
+## 5 Fees and Payment 
+
+(a) Customer will pay Grey Wall the fees set forth in the Order Form for setup of[User][access][to][the][Veoci] Program, use of the Service and any other services or products described therein. 
+
+(b) All payments are due within thirty (30) days from date of invoice. If Customer's account is thirty (30) days or more overdue, Grey Wall may suspend the Service upon at least two (2) business days’ notice to Customer without liability until any such amounts are paid in full, in addition to any of its other rights or remedies. 
+
+(c) The fees and pricing agreed upon between the Customer and Grey Wall in the Order Form(s) assume that the Customer’s labor force will remain substantially the same size during the term of this Agreement. Therefore, if (i) Customer’s labor force experiences a material increase after the effective date of this Agreement, whether by acquisition, merger, consolidation, organic growth by hiring, or otherwise, and such Customer has purchased an unlimited User Service, Grey Wall may at its option terminate such Agreement and may offer the Service to the Customer ona per user basis at the rate indicated in the Veoci Program price list at that time. 
+
+6 Customer Data 
+
+(a) As between Grey Wall and Customer, Customer exclusively owns all rights, title and interest in and to all Customer Data. Customer Data is Confidential Information of Customer. Recovery of any Customer Data deleted by Customer shall be Customer’s responsibility. 
+
+(b) Subject to Grey Wall’s responsibilities set forth in Section 7, Grey Wall will not be responsible for any unauthorized access to or alteration, theft or destruction of Customer Data through accident, fraudulent means or devices, or any other method. 
+
+## 7 Confidentiality: Privacy 
+
+(a) In the course of performance under this Agreement, one party (the “Disclosing Party”) may disclose, deliver or permit access by the other party (the “Receiving Party”) to its Confidential Information. The Receiving Party shall hold the Disclosing Party’s Confidential Information in strictest confidence and shall not 
+
+|“| Proposal No. GWS77223962 (m2 wwwveoc.com | mark.demski@greywallsoftwarecom | 813-915-1946 | Veoci Grey Wall Software LUC, 395 Church Street 14th Floor, New Haven, CT 06510 
+
+## GREY Mem SOFTWARE,LLC = sN 
+
+disclose or provide such Confidential Information to any third party except as expressly provided in this Section. The Receiving Party shall not make any use of the Confidential Information except such limited uses as are required or permitted under this Agreement, and shall cause its employees, agents, financial advisors, attorneys, and Users to maintain such Confidential Information in complete confidence, and shall disseminate such Confidential Information only on a need to know basis. Upon expiration or termination of[this] __.Agreement,or at any time upon the Disclosing Party’s request, the ReceivingParty shall promptlyreturnorn, at the Disclosing Party’s option, destroy all of the Disclosing Party’s Confidential Information, and all copies of and other materials containing such Confidential Information. The Receiving Party shall have no obligation under this Section 7 with respect to any Confidential Information that the Receiving Party can demonstrate by reasonable written evidence: (i) was already known to it at the time of its receipt without restriction on its disclosure; (ii) is or becomes generally available to the public other than by breach of this Agreement; (iii) is independently obtained from a third party whose disclosure to the Receiving Party does not violate a duty of confidentiality; (iv) is independently developed without use or reference to any of the Disclosing Party’s Confidential Information. If the Receiving Party is required by a court or other body of competent jurisdiction to disclose the Confidential Information, the Receiving Party may disclose only so much Confidential Information as is legally required, and the Receiving Party will promptly notify such compelled disclosure to the Disclosing Party if permitted by Law to do so. 
+
+(b) In the event ofa breach ofthis Section 7, the Disclosing Party may not have an adequate remedy at Law. The Disclosing Party may seek temporary and/or permanent injunctions, specific performance or any other form of equitable relief. For the Veoci Program, the Service and any other trade secrets, the obligations of this Section 7 shall continue for so long as the information remains a trade secret, and for all other Confidential Information, the obligations shall extend for five (5) years from the expiration or termination of this Agreement. 
+
+## 8 Proprietary Rights 
+
+Grey Wall and its licensors (if any) shall retain all right, title, copyright, patent, trademark, trade secret and all other proprietary interests to the Veoci Program, the Service and to all Grey Wall intellectual property and any enhancements, modifications or derivatives of any of the foregoing. Customer may not distribute, promote, or otherwise use any information or materials relating to the Veoci Program or the Service for any external use without Grey Wall’s prior written consent or as otherwise specifically permitted in this Agreement. No copyright, patent, trademark, trade secret or other right of intellectual property not expressly granted under this Agreement is exchanged between the parties. Subject to Customer’s ownership of the Customer Data, Grey Wall retains all rights to any related work product delivered under this Agreement and Customer acknowledges and agrees that it obtains no rights to such work product. Customer shall not: (i) modify, copy or create derivative works based on the Veoci Program or the Service; (ii) frame or mirror any content forming part of the Veoci Program or the Service, other than on Customer's own intranets or otherwise for its own internal business purposes in accordance with this Agreement; (iii) reverse engineer the Veoci Program or the Service; or (iv) access or use the Veoci Program or the Service to build a competitive product or service, or copy any ideas, features, functions or graphics of the Veoci Program or the Service. Grey Wall shall own any and all rights to, and may use or incorporate into the Service, any suggestions, enhancement requests, recommendations or other feedback provided by Customer or its Users relating to the operation of the Service. 
+
+(a) Each party represents and warrants to the other that it has the power and authority to enter into and 
+
+|“| Proposal No. GWS77223962 a. ve www.veocLcom | mark.demski@greywallsoftware.com | §13-915-1946 [wee| Grey Wall Software LLC, 195 Church Street 14th Floor, New Haven, CT 06510 
+
+| : 
+
+| (GREY BRAM SOFTWARE,LLC = : perform its obligations under this Agreement. (b) Grey Wall represents and warrants to Customer that: (i) it owns or otherwise has sufficient rights in | the Veoci Program to grant to Customer the rights to access and use the Service granted in this Agreement, | and (ii) it has taken commercially reasonable steps to test the Service for Viruses. | (C) GREY WALL DOES NOT REPRESENT OR WARRANT THAT ALL ERRORS WILL BE CORRECTED OR | THAT THE VEOCI PROGRAM WILL RUN ERROR FREE OR UNINTERRUPTED. EXCEPT AS EXPRESSLY SET : FORTH ABOVE, TO THE EXTENT PERMITTED BY LAW, NO OTHER WARRANTIES, WHETHER EXPRESS OR IMPLIED THIRD-PARTY WARRANTIES OR IMPLIED WARRANTIES OF MERCHANTABILITY, SUITABILITY, | WALLSATISFACTORY MAKES NOQUALITY, WARRANTIESOR FITNESS WITH FORRESPECTA PARTICULAR TO ANY HARDWARE PURPOSE, AREEQUIPMENT MADE BYOR GREY THIRD-PARTY WALL AND GREY SOFTWARE THAT GREY WALL MAY USE TO PROVIDE THE SERVICE OR CUSTOMER MAY USE TO ACCESS THE SERVICE. 
+
+(d) Customer represents and warrants to Grey Wall that: (i) Customer has the right to transmit to Grey Wall, and receive from Grey Wall, all data, material and records, including the Customer Data that Customer provides to Grey Wall and that are required to enable Grey Wall to perform the Service and any otherofits obligations under this Agreement; and {ii) it will use reasonable commercial efforts to prevent the inclusion of Viruses while it and its Users access the Service. 
+
+## 10 Limitationof Liability 
+
+(a) Except for death or personal injury and Grey Wall’s indemnity obligations in Section 11, Grey Wall's liability for direct damages, loss or liability for any cause, and regardless of the form of action will be limited to the total amount of fees payable by Customer under this Agreement over the six (6) months prior to the date that the action arose. 
+
+(b) THE REMEDIES PROVIDED IN THE AGREEMENT TO CUSTOMER ARE THE CUSTOMER’S EXCLUSIVE REMEDIES. EXCEPT WITH RESPECT TO ITS INDEMNIFICATION OBLIGATIONS IN SECTION 11, IN NO EVENT SHALL GREY WALL BE LIABLE TO THE CUSTOMER OR ANY OTHER PARTY, WHETHER IN CONTRACT, TORT, OR OTHERWISE, FOR ANY INCIDENTAL, INDIRECT, PUNITIVE, EXEMPLARY, SPECIAL, CONSEQUENTIAL OR UNFORESEEABLE LOSS, DAMAGE OR EXPENSE, LOSS OF PROFITS, LOSS OF BUSINESS, LOSS OF OPPORTUNITY, LOSS OR CORRUPTION OF DATA, HOWEVER ARISING, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH LOSS OR DAMAGES BEING INCURRED. 
+
+11 Indemnification 
+
+(a) Grey Wall agrees to defend and indemnify Customer from and against, or at its option settle, any third- party claims (each a “Claim”) that the Service or the Veoci Program alone, and not in combination with any other product or program, infringes any third-party intellectual property rights. Grey Wall may, at its option and at its own cost, procure for Customer the right to continue to use the Service; repair, modify or replace the Service or Veoci Program so that it is no longer infringing; or provide a pro rata refund of[the][fees] paid based on the then-current term. Grey Wall shall have no liability under this Section if the allegation of infringement is a result of: (i) a modification of the Veoci Program by anyone other than Grey Wall, (ii) the Customer or any User not using the Service in accordance with the User Guide, (iii) or a work product that was produced at Customer’s specific direction. THE FOREGOING STATES GREY WALL'S ENTIRE LIABILITY AND OBLIGATIONS REGARDING CLAIMS OF INFRINGEMENT, AND THE EXCLUSIVE REMEDY AVAILABLE TO CUSTOMER WITH RESPECT TO ANY ACTUAL OR ALLEGED INFRINGEMENT OF ANY INTELLECTUAL 
+
+; : : : : : : | 
+
+|“|| Proposal No. GWS77223962 [eee| Grey Wall Software LLC, 195 Church Street 14th Floor, New Haven, CT 06510 
+
+## PROPERTY OR OTHER PROPRIETARY RIGHTS. 
+
+## _._._third 
+
+(b) Customer, to the extent permitted by law, agrees to defend and indemnify Grey Wall from and against, or at its option settle, all Claims made or brought against Grey Wall: (i) arising out of Customer's use of the Service; (ii) alleging that the Customer Data, Customer’s materials or records, or Customer's use of the Service in violation of this Agreement, infringes the intellectual property rights of, or has otherwise harmed, a party; or (iii) alleging that Grey Wall's use of the CustomerData as.contemplated inthis Agreementis200 not authorized. 
+
+(c) A party’s indemnification obligation is contingent upon: (i) the indemnified party providing prompt notice to the indemnifying party of any such Claim and assistance in its defense; (ii) the indemnifying party's sole right to control the defense or settlement of any such Claim, except that any settlement requiring a payment or admissionofliability on the part of the indemnified party is subject to the indemnified party's prior approval, not to be unreasonably withheld or delayed; and (iii) that the indemnified party shall not take any action or omit to take action that hinders the defense or settlement process, as reasonably directed by the indemnifying party. 
+
+## 12 Termination 
+
+This Agreement commences on the start date specified in the Term. Customer has the option to renew for this agreement for four (4) one year renewal periods with written notice of exercising this option to renew thirty (30) days before the end ofthe prior term. The pricing during any automatic renewal will be the same as that during the immediately prior term unless Grey Wall gives Customer a written notice of a price increase at least sixty (60) days before the end ofthe prior term, in which case the pricing increase will be effective upon renewal and thereafter. Any such pricing increase shall not exceed three percent (3%) or the CPI of the pricing for the prior year unless the pricing in the prior year was designated as promotional or special rate. Either party shall have the right to terminate this agreement (i) upon thirty (30) days written notice to the other party ofa material breach of this Agreement, and such breach remains uncured at the expiration of such period after which written notice is given to the breaching party; or (ii) subject to any applicable mandatory Law, if a party becomes insolvent or if bankruptcy or receivership proceedings are initiated by or against a party; (iii) In addition to any termination rights in the Subscription Terms, customer shall have the right to terminate this Quote for any reason in its sole discretion by giving a sixty (60) day written notice to Grey Wall at any time during the term. If Customer gives Grey Wall a notice of termination as described in this section, Grey Wall will cease to perform the Services at the end of Term using reasonable care in concluding its Provision of Services. Upon termination of the agreement, however caused, Customer shall: (a) Pay to Grey Wall all outstanding invoices and sums owed which have accrued up to the end of the current term at the time of termination. If customer has paid for services up front, Grey Wall will return the moneys paid for unused quarters (3 month periods) (b) at Grey Wall’s option, either return to Grey Wall or destroy all confidential information which it has obtained from Grey Wall, and (c) have no claims for damages or compensation for loss of goodwill or like thereof against Grey Wall. 
+
+## 13 Choiceof Law 
+
+The Agreement shall be construed and governed in accordance with the lawsofthe State of Illinois (Excluding its conflict of laws provisions). 
+
+## 14 Miscellaneous 
+
+(a) Customer may not assign this Agreement, the use ofthe Service or any otherofits rights and 
+
+|“|| Proposal No. GWS77223962 
+
+Dee Grey Wall Software LLC, 195 Church Street 14th Floor, New Haven, CT 06510 
+
+; : A : 
+
+obligations under this Agreement without Grey Wall’s prior written consent. This Agreement shall be binding on the parties and their respective successors and assigns. Grey Wall shall have the unrestricted right to (i) assign all of its rights and obligations under this Agreement, and (ii) subcontract all or part of its performance under this Agreement. 
+
+(b) Customer shall not export or use the Service in violation of applicable Laws. 
+
+(c) The Services, other technology that Grey Wall makes available, and derivatives thereof, may be subject to export laws and regulations of the United States and other jurisdictions. Customer represents that itis not named on any U.S. government denied-party list. Customer shall not permit Users to access or use Services in a U.S.-embargoed country or in violation of any U.S. export law or regulation. 
+
+(d) Neither party is an agent or contractorofthe other, and this Agreement does not confer or delegate upon a party any discretionary authority or control on behalf of the other party. 
+
+: 
+
+(e) Each party shall be excused from performance of its obligations under this Agreement for any period and to the extent that it is prevented from performing such obligations, in whole or in part, as a result of delays caused by circumstances beyond its reasonable control, including an act of God, severe weather, hurricane, earthquake, flood, war, civil disturbance or civil commotion, terrorism, court order, or any other cause over which such party does not have control, including internet or communication problems (including an internet service provider's or hosting facility’s failures or delays involving hardware, software or power systems not within Grey Wall's possession or reasonable contro)), third-party hardware or software errors, Viruses or similar harmful programs or data, or unauthorized access or theft (any ofthe[foregoing,][a]["Force] Majeure Event"). 
+
+(f) All documents referenced in this Agreement, including the Order Form(s), are a part of this Agreement. All other prior or contemporaneous agreements, proposals, purchase orders, representations and other understandings, whether oral or written, related to the Service are superseded by this Agreement. No alteration or modification of this Agreement will be valid unless made in a writing signed by the parties. 
+
+(g) There shall be no third-party beneficiaries to this Agreement. 
+
+(h) All notices required or permitted under this Agreement hereunder shall be delivered to the other party either personally, or by telefax, email, certified or registered mail (return receipt requested), or overnight courier. If delivered personally, notice shall be effective when delivered; if delivered by telefax or email, notice shall be effective upon electronic confirmation; and if delivered by mail or overnight courier, notice shail be effective upon confirmation of delivery. 
+
+(iD The section headings in this Agreement are for informational purposes only and shall not affect the interpretation of any provision of this Agreement. When used in this Agreement, “including” and word(s) of similar import mean “including without limitation.” 
+
+(i) If any provision of this Agreement shall be held to be invalid, illegal or unenforceable, it shall be deemed severed from this Agreement and shall not affect in any respect the remainder of this Agreement. 
+
+(k) The sections entitled “Warranty,” “Limitation of Liability,” "Customer Data,” "Fees and Payment," " Indemnification," "Confidentiality; Privacy,” "Proprietary Rights" and Customer’s obligation to pay any outstanding fees due shall survive expiration or termination of this Agreement. 
+
+> |“| Proposal No. GWS77223962 
+
+**==> picture [68 x 12] intentionally omitted <==**
+
+**----- Start of picture text -----**<br>
+is.<br>**----- End of picture text -----**<br>
+
+
+**==> picture [92 x 12] intentionally omitted <==**
+
+**----- Start of picture text -----**<br>
+rr cl<br>**----- End of picture text -----**<br>
+
+
+**==> picture [169 x 12] intentionally omitted <==**
+
+**----- Start of picture text -----**<br>
+i ‘(itrtdi‘;<br>**----- End of picture text -----**<br>
+
+
+## B. Service Level Agreement 
+
+Capitalized terms that are not otherwise defined in this Exhibit B shall have the meaning set forth in the Subscription Terms and Conditions. 
+
+1. Introduction 
+
+The measurements and service levels set forth in this Exhibit B are designed to provide an objective measurement of Grey Wall’s performance of the Service (each an “SLA’; collectively, “SLAs”). The SLAs may be reviewed and adjusted as mutually agreed upon in writing by the parties. 
+
+2, Reporting 
+
+Grey Wall agrees to provide to Customer, within sixty days of its receipt of a written request from Customer, a quarterly electronic report to verify Grey Wall's performance against the SLAs. Grey Wall agrees to investigate and correct failures to meet the SLAs by: 
+
+(i) initiating investigations to determine the root causeofthe failure; (ii) using commercially reasonable efforts to correct the issue; (iii) advising Customer as reasonably requested by Customerofthe status of efforts being undertaken with respect to the issue; and, (iv) providing reasonable evidence to Customer that the cause ofthe issue is being corrected or will be corrected. 
+
+## 3. SLA Definitionsand Measurements 
+
+“Minor Default” is deemed to occur when Grey Wall’s performance against an SLA falls in the range of performance in which a minimum SLA credit is granted to Customer. 
+
+“Major Default” is deemed to occur when Grey Wall’s performance against an SLA falls in range of performance in which a maximum SLA default credit is granted to Customer. 
+
+“Scheduled Downtime,” means the planned downtime, of which Grey Wall has notified Customer at least 72 hours in advance. 
+
+“Service Level Default” means that Grey Wall’s performance fell below the established SLA during a measurement period. 
+
+“Service Level Credit” means the amountof additional Service the Customer will be credited for the applicable Service Level Default during the measurement period. 
+
+|“| Proposal No. GWS77223962 
+
+Deere| Grey Wall Software LLC, 
+
+195 Church Street 14th Floor, New Haven, CT 06510 
+
+| | 
+
+| 
+
+“Target Service Level” means the expected performance range, within which no Service Level Default is assessed, and no Service Level Credit is granted. 
+
+Measurement periods are monthly, in arrears, with Service Level Defaults and Service Level Credits being calculated monthly. Any Service Level Credits shall be credited to the Customer annually in arrears, as applicable. 
+
+The SLA’s set forth in this Exhibit shall be Customer’s sole and exclusive remedy related to the SLA default and such Service Level Credits are in lieu of other available remedies such as damages for breach of contract. 
+
+## 4. Exceptions 
+
+The following items will not be considered as a part of the calculation of Service Level Credits and Grey Wall will be relieved of responsibility for SLAs and associated Service Level Credits to the extent Grey Wall’s failure to meet the SLA(s) is determined by the parties, to be due to: 
+
+(i) Force Majeure Events as defined in the Agreement 
+
+(ii) Outages resulting from Scheduled Downtime, including Grey Wall’s upgrading of data center infrastructure 
+
+(iii) Outages arising from Customer's network being inaccessible 
+
+(iv) Domain Name Server (DNS) issues outside of the control of Grey Wall 
+
+(v) Customer's acts or omissions (including acts or omissions of a third party not acting on behalf of Grey Wall), including, without limitation, custom configuration, scripting, coding, negligence, failure to timely perform or provide relevant assistance, information or infrastructure required of Customer or willful misconduct 
+
+(vi) Internet outages, or other third party infrastructure outages which hinder access to Grey Wall’s environment 
+
+(vii) Outages requested by Customer 
+
+(viii) Changes by Customer, or its agents, to Customer’s environment which are not communicated to Grey Wall and which adversely impact Grey Wall’s ability to perform the Service. 
+
+(ix) Inability of Customer to log in due to Customer’s use of LDAP or other single sign-on methods to control authentication. 
+
+## 5. Service Level Measurement 
+
+Service Area: Production Uptime 
+
+Objective: Grey Wall to provide 99.5% monthly uptime for Production Software Instances 
+
+Measurement: For Production availability, the Production downtime shall be measured as the aggregate number of minutes during the monthly measurement pericd in which the Service was unavailable, divided by the total number of minutes in the monthly measurement period. The period of unavailability shall be measured from the point-in-time that such unavailability is or reasonably should have been detected by Grey Wall. 
+
+|“| Proposal No. GWS77223962 EZ wwwveocicom | mark.demski@greywallsoftware.com | 813-915-1946 | Veoct | Grey Wall Software LLC, 195 Church Street 14th Floor, New Haven, CT 06510 
+
+| 
+
+(Uptime % = [1-(downtime/Production)*100%]). For example, if hosting is unavailable for a total of 200 minutes in a 30-day month, then Production Uptime is [1-(200/43,200)*100%] = 99.5% 
+
+Target Service Level: Production Uptime is greater than or equal to 99.95% 
+
+Minor Default: Production Uptime is less Uian 99.95% but greater than or equal to 98% 
+
+Major Default: Production Uptime is less than 98% 
+
+Measurement Period: Measured on a monthly basis. Grey Wall will measure the Production Uptime for each downtime event and in the aggregate each month during the Term, and, upon written request of Customer, report the results to Customer within ten (10) business days ofthe of the request. 
+
+Service Level Credits: Minor Default = credit of one (1) additional day of[the][Service][as][an][extension][of][ the] term of the Agreement, 
+
+Major Default = credit of two (2) additional days of the Service as an extension of[the][term][of][the][ Agreement.] 
+
+## C. Support Agreement 
+
+## Included Support: 
+
+° Support Center. The Veoci team will provide support from a support center via e-mail, an Internet based Client support tool (English version only), and telephone. All support services shall be provided in English language, unless otherwise specified in this Agreement. 
+
+- © Phone: <to be provided> 
+
+- © Internet based Client support tool: <to be provided> o Email: <to be provided> 
+
+° Hours of Support Center Operation. Support center is available twenty-four (24) hours per day, seven (7) days per week 
+
+- . Requesting Support. _o Customer will identify the severity level (defined below) of[the][incident][ when][requesting] support from the support center 
+
+   - Ifall support center representatives are busy with other calls, a message will be left on the voicemail response system, which will page appropriate support personnel 
+
+   - © The Veoci team will target to meet and exceed defined service level metrics defined in this Exhibit 
+
+Non-Critical Issue: System performance or bug affecting some users that does not prevent a customer from using the software to respond to a crisis. 
+
+Response Time: 2 business days 
+
+Channel: Email, web, or general support phone number. 
+
+Critical Issue: System performance or bug affecting all users that prevents a customer from using the software to respond toa crisis. 
+
+| “a | Proposal No. GWS77223962 
+
+(ieee Grey Wall Software LLC, 195 Church Street 14th Floor, New Haven, CT 06510 
+
+| 
+
+| 
+
+| 
+
+**==> picture [530 x 30] intentionally omitted <==**
+
+**----- Start of picture text -----**<br>
+GREY Maem SOFTWARE,LIC . . .} };»©§5— 8 a<br>: Cs i w.s——“( NC i i<br>**----- End of picture text -----**<br>
+
+
+Response time: 2 business hours Channel: Email, web, or general support phone number 
+
+Crisis Issue: System outage or severe bug preventing customer from using the software during their response toa crisis. 
+
+Response Time: 30 minutes (24x7) Channel: Emergency phone number 
+
+Crisis Support: General questions, support, or assistance in the instance where: the Veoci system is fully operational, it is outside of Veoci’s normal business hours, but the customer is responding to a crisis and needs support. 
+
+Response Time: 30 minutes (24x7). May be subject to $200 hourly rate. Channel: Emergency phone number 
+
+Business Hours: M-F 1:30AM -7PM Eastern Time 
+
+The parties hereto, intending to be legally bound hereby, have each caused its duly authorized officers or representatives to sign this Quote as of the date first set forth above. 
+
+**==> picture [419 x 109] intentionally omitted <==**
+
+**----- Start of picture text -----**<br>
+Grey Wall Software, LLC Lake County, IL<br>are é 43053020_20181214 NN at siaPyrex K\ L {<br>By: NAKXXAXPIXKX Sukh Grewal By: Feat wyneeTe<br>Title: XR OAOX MRM XIMEIEX CEO Title: Peron acury<br>Detshopmenk Date: November 12, 2018 Date: , \\2AIG<br>**----- End of picture text -----**<br>
+
+
+“| Proposal No. GWS77223962 | veoci Grey Wall Software LLC, 195 Church Street 14th Floor, New Haven, CT 06516 
+
+| : 
+

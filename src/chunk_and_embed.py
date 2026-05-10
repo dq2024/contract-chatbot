@@ -1,13 +1,6 @@
 """
 Chunks contract markdown text and stores embeddings in Supabase pgvector.
 
-Chunking strategy:
-  - Split on ## headers for semantic chunks
-  - Accumulate short sections (< MIN_CHARS) into the next section
-  - Split oversized sections (> MAX_CHARS) at sentence boundaries with overlap
-  - Strip OCR image artifacts before chunking
-  - Fall back to fixed-size splitting for docs with no headers
-
 Run from project root:
     python src/chunk_and_embed.py
 """
@@ -22,7 +15,7 @@ from sentence_transformers import SentenceTransformer
 load_dotenv(Path(__file__).parent.parent / ".env")
 
 BASE_DIR = Path(__file__).parent.parent
-TEXT_DIR = BASE_DIR / "selected_contracts_text"
+TEXT_DIR = BASE_DIR / "data" / "selected_contracts_text"
 
 MODEL_NAME = "all-MiniLM-L6-v2"
 BATCH_SIZE = 64
@@ -32,6 +25,7 @@ OVERLAP    = 150   # character overlap when splitting large sections
 
 
 def clean_text(text: str) -> str:
+    # Strip OCR artifacts injected by pymupdf4llm for images and scanned sections
     text = re.sub(r'\*\*==> picture \[.*?\] intentionally omitted <==\*\*', '', text)
     text = re.sub(r'<br>\s*', '\n', text)
     text = re.sub(r'\*\*----- Start of picture text -----\*\*\s*', '', text)
@@ -41,7 +35,6 @@ def clean_text(text: str) -> str:
 
 
 def split_at_sentences(text: str) -> list[str]:
-    """Split large text into MAX_CHARS chunks at sentence boundaries with overlap."""
     sentences = re.split(r'(?<=[.!?])\s+', text)
     chunks = []
     current = []
@@ -50,7 +43,7 @@ def split_at_sentences(text: str) -> list[str]:
     for sent in sentences:
         if current_len + len(sent) > MAX_CHARS and current:
             chunks.append(' '.join(current))
-            # carry back enough sentences for overlap
+            # carry the tail of the previous chunk into the next to preserve context at boundaries
             overlap, overlap_len = [], 0
             for s in reversed(current):
                 if overlap_len + len(s) > OVERLAP:
@@ -71,10 +64,9 @@ def split_at_sentences(text: str) -> list[str]:
 
 def chunk_document(text: str) -> list[dict]:
     text = clean_text(text)
-
     raw_sections = re.split(r'\n(?=## )', text)
 
-    # No headers — fixed-size fallback
+    # No ## headers — fall back to fixed-size windows with overlap
     if len(raw_sections) <= 1:
         chunks = []
         start = 0
@@ -83,7 +75,6 @@ def chunk_document(text: str) -> list[dict]:
             start += MAX_CHARS - OVERLAP
         return [c for c in chunks if c['text']]
 
-    # Parse title + body from each section
     sections = []
     for part in raw_sections:
         part = part.strip()
@@ -94,7 +85,7 @@ def chunk_document(text: str) -> list[dict]:
         body  = lines[1].strip() if len(lines) > 1 else ''
         sections.append((title, body or part))
 
-    # Accumulate sections into chunks, merging short ones and splitting large ones
+    # Accumulate sections greedily; flush and split when a section would exceed MAX_CHARS
     chunks = []
     pending_text  = ''
     pending_title = ''
@@ -106,14 +97,12 @@ def chunk_document(text: str) -> list[dict]:
             pending_text  = candidate
             pending_title = pending_title or title
         else:
-            # Flush pending buffer
             if pending_text:
                 for sub in (split_at_sentences(pending_text) if len(pending_text) > MAX_CHARS else [pending_text]):
                     chunks.append({'text': sub, 'section_title': pending_title})
             pending_text  = body
             pending_title = title
 
-    # Flush remainder
     if pending_text:
         for sub in (split_at_sentences(pending_text) if len(pending_text) > MAX_CHARS else [pending_text]):
             chunks.append({'text': sub, 'section_title': pending_title})

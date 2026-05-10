@@ -1,0 +1,65 @@
+July 31, 2023 
+
+22120 Flow-Technics Contract Mod 1, Exhibit A 
+
+|ROUTINE REPAIR SERVICE—HOURLY BILLING RATE<br>Hourlyratesfor repairservicestoincludethefollowing:|oe<br>ol|
+|---|---|
+|ABS/Sulzer(Submersible pumps and Mixers)|Po|
+|Thefollowing laborratesforemergencyservice requestsfor repairworkwhichwill<br>beordered as needed, and forrepair ofequipment determined toneed repair atthe<br>timeofpump inspection|i<br>Be<br>Be|
+|business hours||
+|holidays||
+
+
+
+## SCOPE OF WORK 
+
+The Contractor shall be responsible for Mobilization/Demobilization, Pump Extraction, Installation and Testing. Explanation of all included services follows. Including all labor, replacement parts, all portal-to-portal transportation charges, and all other charges of every kind and nature. 
+
+Mobilization/Demobilization — Mobilization is to include providing a technician and appropriate equipment dispatched to site (mileage included) and set-up of equipment at site. After inspection and maintenance and/or repairs are performed, demobilization shall include tearing down of equipment, clean-up of site, removal of used pipe and materials, and loading of equipment. All old equipment and piping will be the responsibility of the contractor to remove, unless told by Lake County Public Works that they want to save for future usage. 
+
+Pump Extraction — Includes disconnection of piping and electrical, and removing pump motor and assembly for inspection. Standard inspection is to include, but is not limited to, checking pump motor, bowl assembly, check valve, pipe, and meg ohm cable. 
+
+Installation and Testing — Includes installation of repaired/serviced or pump assembly and re-connection of piping and electrical. After installation, the pump is to be tested for proper operation, including the starting of the pump and measuring its electrical load and water pumping capacity. The test pumping is set up for the bidder to pull the flow performance and make sure the bidder is comfortable in the performance of the installed equipment. All pump motors that are greater than 100hp are required to register a resistance reading of at least 100 meg ohms. All motors under 100hp are to register a resistance reading of at least 3 meg ohms. Lake County will perform all final water sampling once the contractor has completed their installation and test running. 
+
+Contractor or their sub-contractor must provide factory-trained certified technicians. Additionally, they must provide documentation from the manufacturer verifying that their technicians are factory-trained and certified to work on Pumps to repair and/or replace mechanical, electrical and electronic components therein for each of the manufacturers stipulated below: 
+
+## ABS/Sulzer (Submersible Pumps and Mixers) 
+
+In the event that repairs will be performed by a subcontractor(s), Lake County shall consider the subcontractor’s experience, manufacturer certifications, and proximity in determining their qualifications. 
+
+## PUMP REPAIR 
+
+Hourly labor rates shall include all costs overhead, profit, insurance, Workman’s Compensation, unemployment insurance, social security, travel, mileage, tolls, etc. for pump repairs and all other charges of every kind and nature, 
+
+22120 Flow-Technics Contract Mod 1, Exhibit A After inspection, Contractor shall submit a written proposal with repair recommendation to the Operations Manager of Lake County Public Works Department, 650 West Winchester Road, Libertyville, IL 60048-1329 (telephone: 847-3777500). Written proposals are required and shall include a full breakdown of parts price, number of hours required for repair, and hourly labor rate. 
+
+NOTE: Under no circumstances are repairs, replacement of parts, or any general maintenance functions to be performed without approval from the Operations Manager. All repairs shall be scheduled during normal hours of work. If overtime hours are required for emergency repairs, prior approval must be obtained from the Operations Manager. 
+
+Lake County is not responsible for any unauthorized repairs or maintenance work performed by the Contractor. Lake County reserves the right to purchase repair parts or services under separate contracts, if it is deemed to be in the best interest of the County. 
+
+Upon completion of maintenance and repair service, the Contractor shall submit a written report to Lake County Public Works Department (Attention: Operations Manager), 650 West Winchester Road, Libertyville, IL 60048-1329 indicating work performed, any problems found, or any additional work that is required to keep the pump in operation. All work performed shall be entered on a report sheet and submitted upon completion of the job. The Contractor will provide a proposal for any additional work recommended. 
+
+## SERVICE SCHEDULE 
+
+Repair work, if necessary, is to be completed per the following schedule: no more than ten (10) business days. 
+
+Emergency Response Time: Should Public Works request immediate service due to a critical malfunction or failure, Contractor shall be required to provide service within eight (8) hours of the request. 
+
+The allotted time includes the mobilization, removal, reinstallation, testing, and demobilization. If there is an issue getting parts or replacement equipment, a notification of the delivery date is required and then an adjustment of the schedule would be made at that time. 
+
+## MAINTENANCE AND REPAIR SERVICE REPORTS 
+
+Reporting/Documentation: In addition to the genera! reporting requirements described above, the Contractor will be required to provide Lake County Public Works with the following documentation: 
+
+- Pump Head/Capacity Curve (on pump and motor) 
+
+- ° Pump Test Data Sheet {except for Group A pumps) 
+
+- Technical Data on Pump and Motor and Nameplate Data 
+
+- ¢ Description of Labor and Services Provided 
+
+This information is to be provided after every service call. 
+
+Failure to submit the required reports may be cause for disqualification of the Contractor for future contracts. 
+

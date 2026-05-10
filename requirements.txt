@@ -4,3 +4,7 @@ anthropic
 supabase
 sentence-transformers
 python-dotenv
+streamlit
+ragas
+langchain-anthropic
+langchain-huggingface

@@ -1,14 +1,6 @@
-"""
-Streamlit chat UI for Lake County contracts.
-
-Routing logic:
-  SQL    — structured questions answered via text-to-SQL
-  RAG    — content questions answered via vector search over chunks
-  HYBRID — SQL to find relevant documents, then RAG filtered to those docs
-"""
-
 import json
 import os
+import re
 import anthropic
 import streamlit as st
 from dotenv import load_dotenv
@@ -44,7 +36,7 @@ Return this JSON format:
   "reasoning": "<one sentence>"
 }}
 
-For sql and hybrid modes, write a valid PostgreSQL SELECT query against the contracts table.
+For sql and hybrid modes, write a valid PostgreSQL SELECT query against the contracts table. Make sure to include source_filename as well.
 Strip trailing semicolons from SQL.
 The sql field should be null for rag mode.
 
@@ -82,9 +74,7 @@ def route(claude: anthropic.Anthropic, question: str) -> dict:
         messages=[{"role": "user", "content": question}],
     )
     text = resp.content[0].text.strip()
-    # Strip markdown fences if present
     if "```" in text:
-        import re
         match = re.search(r"```(?:json)?\s*(.*?)```", text, re.DOTALL)
         text = match.group(1).strip() if match else text
     try:
@@ -102,12 +92,14 @@ def run_rag(supabase, embedder, question: str, filter_filenames: list[str] | Non
     embedding = embedder.encode(question).tolist()
     params = {"query_embedding": embedding, "query_text": question, "match_count": 30}
     if filter_filenames:
+        # In hybrid mode, restrict vector search to only the documents identified by SQL
         params["filter_filenames"] = filter_filenames
     result = supabase.rpc("match_chunks", params).execute()
     return result.data or []
 
 
 def format_answer(claude: anthropic.Anthropic, question: str, context: str, history: list[dict]) -> str:
+    # Include the last 6 messages for conversational context without blowing the context window
     messages = []
     for msg in history[-6:]:
         messages.append({"role": msg["role"], "content": msg["content"]})
@@ -139,7 +131,7 @@ def handle_question(question: str, supabase, claude, embedder, history: list[dic
             f"[{c['source_filename']}]\n{c['chunk_text']}" for c in chunks
         )
 
-    else:  # hybrid
+    else:  # hybrid: SQL narrows to relevant documents, RAG searches their full text
         try:
             rows = run_sql(supabase, sql)
         except Exception as e:

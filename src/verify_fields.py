@@ -1,13 +1,9 @@
 """
-Second-pass extraction to verify and correct specific fields.
+Re-runs Claude on each contract PDF to verify and correct auto_renewal_flag,
+internal_department, and null date fields. Updates Supabase via source_filename.
 
-Re-runs Claude with improved prompts for auto_renewal_flag, internal_department,
-and any date fields that are null. Updates Supabase via source_filename.
-
-Usage:
-    python src/verify_fields.py
-    python src/verify_fields.py --dry-run
-    python src/verify_fields.py --files 18194_Fully_Executed_Agreement.pdf
+Run from project root:
+    python src/verify_fields.py [--dry-run] [--files FILENAME ...]
 """
 
 import argparse
@@ -24,7 +20,7 @@ from supabase import create_client, Client
 load_dotenv(Path(__file__).parent.parent / ".env")
 
 BASE_DIR = Path(__file__).parent.parent
-PDF_DIR  = BASE_DIR / "selected_contracts"
+PDF_DIR  = BASE_DIR / "data" / "selected_contracts"
 
 MODEL          = "claude-sonnet-4-6"
 MAX_CONCURRENT = 2
@@ -129,14 +125,17 @@ def parse_date(value: str) -> str | None:
 def build_updates(new_fields: dict, existing: dict) -> dict:
     updates = {}
 
+    # Always re-evaluate auto_renewal_flag — first-pass extraction got this wrong most often
     new_flag = bool(new_fields.get("auto_renewal_flag", False))
     if new_flag != bool(existing.get("auto_renewal_flag")):
         updates["auto_renewal_flag"] = new_flag
 
+    # Only overwrite department if Claude returned something non-empty and different
     new_dept = new_fields.get("internal_department", "").strip()
     if new_dept and new_dept != (existing.get("internal_department") or ""):
         updates["internal_department"] = new_dept
 
+    # Only fill in dates that are missing — don't overwrite values already in Supabase
     for field in ("execution_date", "effective_date", "expiration_date"):
         if not existing.get(field):
             parsed = parse_date(new_fields.get(field, ""))

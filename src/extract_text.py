@@ -1,9 +1,8 @@
 """
-Extract markdown text from all PDFs in selected_contracts/ for chunking and embedding.
-pymupdf4llm handles both digital and scanned PDFs (calls Tesseract internally when needed).
+Extract markdown text from all PDFs in data/selected_contracts/ for chunking and embedding.
 
 Run from project root:
-    python3 data_processing/extract_text.py
+    python3 data/extract_text.py
 """
 
 import csv
@@ -12,8 +11,8 @@ from pathlib import Path
 import pymupdf4llm
 import fitz
 
-CONTRACTS_DIR = Path("selected_contracts")
-TEXT_DIR      = Path("selected_contracts_text")
+CONTRACTS_DIR = Path("data/selected_contracts")
+TEXT_DIR      = Path("data/selected_contracts_text")
 METADATA_CSV  = Path("extraction_metadata.csv")
 
 

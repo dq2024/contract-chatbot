@@ -75,7 +75,8 @@ Answer the user's question clearly and concisely using only the provided context
 Be specific — include vendor names, dollar amounts, and dates where relevant.
 Format lists as markdown bullet points.
 Always cite which document(s) the information comes from.
-If the context doesn't contain enough information to answer, say so clearly."""
+If the context doesn't contain enough information to answer, say so clearly.
+For questions asking about total contract value, you should select the highest most recent number. Do not sum across older documents for the same vendor."""
 
 
 def route(claude_client, question: str) -> dict:

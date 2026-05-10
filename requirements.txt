@@ -8,3 +8,5 @@ streamlit
 ragas
 langchain-anthropic
 langchain-huggingface
+plotly
+numpy

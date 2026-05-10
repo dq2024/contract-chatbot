@@ -72,7 +72,8 @@ Answer the user's question clearly and concisely using only the provided context
 Be specific — include vendor names, dollar amounts, and dates where relevant.
 Format lists as markdown bullet points.
 Always cite which document(s) the information comes from.
-If the context doesn't contain enough information to answer, say so clearly."""
+If the context doesn't contain enough information to answer, say so clearly.
+For questions asking about total contract value, you should select the highest most recent number. Do not sum across older documents for the same vendor."""
 
 JUDGE_SYSTEM = """You are an evaluator scoring a chatbot response about government contracts.
 Score the response on the requested dimension on a scale of 1 to 10 and return JSON only — no other text.

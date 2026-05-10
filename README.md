@@ -2,7 +2,7 @@
 
 A generative AI pipeline that structures Lake County government contract documents into a searchable database and lets non-technical users query them in natural language.
 
-Live app: [Streamlit deployment URL]
+Live app: [[Streamlit deployment URL](https://contract-chatbot-3uwttn3acta6mk3gggjrse.streamlit.app/)]
 Database: Supabase (available for live inspection during walkthrough)
 
 ---

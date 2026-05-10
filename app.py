@@ -210,20 +210,18 @@ def render_dashboard(supabase):
 
     st.divider()
 
-    # Active contracts
-    st.subheader("Active Contracts")
-    active = df[df["expiration_date"].isna() | (df["expiration_date"] >= today)].copy()
+    st.subheader("Contracts Expiring in the Next 12 Months")
 
-    if active.empty:
-        st.info("No active contracts found.")
+    family_max_value = df.groupby("contract_instance_id")["total_contract_value_usd"].max()
+    view_df = df[(df["expiration_date"] >= today) & (df["expiration_date"] <= horizon)].copy()
+
+    if view_df.empty:
+        st.info("No contracts expiring in the next 12 months.")
     else:
-        active["Month"] = active["expiration_date"].dt.to_period("M").astype(str).where(active["expiration_date"].notna(), "No Expiry")
-        active["Status"] = active["auto_renewal_flag"].map(
-            {True: "Auto-Renews", False: "Needs Action"}
-        )
+        view_df["Month"] = view_df["expiration_date"].dt.to_period("M").astype(str)
+        view_df["Status"] = view_df["auto_renewal_flag"].map({True: "Auto-Renews", False: "Needs Action"})
         monthly = (
-            active[active["expiration_date"].notna()]
-            .groupby(["Month", "Status"])
+            view_df.groupby(["Month", "Status"])
             .size()
             .reset_index(name="Count")
             .sort_values("Month")
@@ -239,22 +237,21 @@ def render_dashboard(supabase):
         )
         st.plotly_chart(fig, use_container_width=True)
 
-        family_max_value = df.groupby("contract_id")["total_contract_value_usd"].max()
-        active["family_value"] = active["contract_id"].map(family_max_value)
-
-        table = active[
-            ["vendor_name", "contract_title", "document_type", "expiration_date", "family_value", "internal_department"]
+        view_df["family_value"] = view_df["contract_instance_id"].map(family_max_value)
+        table = view_df[
+            ["vendor_name", "contract_title", "document_type", "execution_date", "expiration_date", "family_value", "internal_department"]
         ].sort_values("expiration_date").copy()
+        table["execution_date"] = table["execution_date"].dt.date
         table["expiration_date"] = table["expiration_date"].dt.date
         table["family_value"] = table["family_value"].apply(fmt_usd)
-        table.columns = ["Vendor", "Title", "Type", "Expires", "Value", "Department"]
-        st.caption(f"{len(active)} active contracts ({active['auto_renewal_flag'].sum()} auto-renew)")
+        table.columns = ["Vendor", "Title", "Type", "Executed", "Expires", "Value", "Department"]
+        st.caption(f"{len(view_df)} contracts expiring in the next 12 months ({int(view_df['auto_renewal_flag'].sum())} auto-renew)")
         st.dataframe(table, use_container_width=True, hide_index=True)
 
     st.divider()
 
     # Vendor spend  +  Department spend
-    spend_view = st.radio("View", ["Active", "Historical"], horizontal=True, key="spend_view")
+    spend_view = st.selectbox("View", ["Active", "Historical"], key="spend_view", label_visibility="collapsed")
     active_mask = df["expiration_date"].isna() | (df["expiration_date"] >= today)
     spend_df = df[active_mask] if spend_view == "Active" else df[~active_mask]
 
@@ -262,7 +259,10 @@ def render_dashboard(supabase):
 
     with col_l:
         st.subheader("Top Vendors by Contract Value")
-        per_contract = spend_df.groupby(["contract_id", "vendor_name"])["total_contract_value_usd"].max().reset_index()
+        per_contract = spend_df.groupby("contract_instance_id").agg(
+            vendor_name=("vendor_name", "first"),
+            total_contract_value_usd=("total_contract_value_usd", "max"),
+        ).reset_index()
         vendor_spend = (
             per_contract.groupby("vendor_name")["total_contract_value_usd"]
             .sum()

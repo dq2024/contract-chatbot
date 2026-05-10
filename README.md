@@ -15,7 +15,7 @@ The pipeline has four stages: document curation, structured extraction, vector s
 
 Started with ~400 PDF contract files. `src/get_document_subset.py` groups documents by shared 5-digit contract ID prefix using regex on filenames (e.g., all files containing "22046" belong to the same contract family). Documents without a recognizable ID in the filename were excluded. In the future, using content-based ID extraction as a fallback could be a good experiment.
 
-Sorted contract families by cumulative file size, smallest first, and selected 139 documents into `data/selected_contracts/`, outputting `data/selected_contracts.csv`. Prioritizing smaller groups first saves on API costs.
+Sorted contract families by cumulative file size, smallest first, and selected 138 documents into `data/selected_contracts/`, outputting `data/selected_contracts.csv`. Prioritizing smaller groups first saves on API costs.
 
 `src/extract_text.py` then uses `pymupdf4llm` to convert each selected PDF to markdown, preserving document structure (headers, tables) for the chunking stage. Outputs text files to `data/selected_contracts_text/`. This text is used for chunking the documents for the vector database described in Stage 3.
 
@@ -88,7 +88,7 @@ Three eval scripts in `eval/`:
 
 **Embedding model.** `all-MiniLM-L6-v2` is fast and free but weak on legal language. Queries for specific clause types (e.g., "indemnification") can miss relevant documents because the embedding does not capture the semantic relationship between the question and dense legal text, even when "Consultant agrees to indemnify" would get a hit. A domain-adapted or larger model would meaningfully improve retrieval quality.
 
-**Extraction scope.** The structured table was built from 139 documents. Fields like `auto_renewal_flag` required a second verification pass and may still have errors in ambiguous cases. Contracts with "option to renew" language are correctly classified as false; "automatically renews unless notice is given" is classified as true. Edge cases between those two remain the most common extraction error.
+**Extraction scope.** The structured table was built from 138 documents. Fields like `auto_renewal_flag` required a second verification pass and may still have errors in ambiguous cases. Contracts with "option to renew" language are correctly classified as false; "automatically renews unless notice is given" is classified as true. Edge cases between those two remain the most common extraction error.
 
 **No access control.** The app uses a service key with full database access. A production deployment would need row-level security, user authentication, and audit logging, especially for sensitive contract terms. Confidentiality for legal documents would also require encrypting fields at rest and restricting which users can query which contract families.
 
@@ -100,7 +100,7 @@ Three eval scripts in `eval/`:
 
 **Better embedding model.** Swap `all-MiniLM-L6-v2` for a larger or legal-domain model. This is the highest-leverage improvement. Retrieval quality directly caps answer quality, and the current model visibly struggles with clause-level queries. The chunk hit rate metric in the eval suite makes this easy to measure before and after.
 
-**Expand document coverage and improve extraction reliability.** The current 139-document scope is a proof of concept. A production system would need robust handling of documents without an ID in the filename, better extraction of multi-rate pricing structures, and a confidence score per extracted field so low-confidence values can be flagged for human review before entering the database.
+**Expand document coverage and improve extraction reliability.** The current 138-document scope is a proof of concept. A production system would need robust handling of documents without an ID in the filename, better extraction of multi-rate pricing structures, and a confidence score per extracted field so low-confidence values can be flagged for human review before entering the database.
 
 **Expand eval coverage.** The current eval suite covers a representative but limited set of queries. Adding more ground truth answers and more edge cases (ambiguous questions, cross-contract comparisons) would give a more complete and reliable signal on where the system succeeds and fails.
 

@@ -70,7 +70,7 @@ For each opportunity identified, output a row in the following table:
 
 Rank rows by combined spend, highest first. Flag any rows where scope overlap is uncertain so the user can review manually before acting. If contract text is needed to confirm scope overlap, search it before reporting."""
 
-RENEWAL_RISK_PROMPT = """Find all active contracts that will expire within 180 days, for each contract, look for other contracts with same contract id and vendor for contract value. look in contact table for auto renewal status. for each contract returned assess the following risk signals. Pull from both the contracts table fields and the contract text where needed:
+RENEWAL_RISK_PROMPT = """Use today's date as a starting point. Find all active contracts that will expire within 180 days, for each contract, look for other contracts with same contract id and vendor for contract value. look in contact table for auto renewal status. for each contract returned assess the following risk signals. Pull from both the contracts table fields and the contract text where needed:
 
 Auto-renewal risk: look in contracts table for auto renewal status. Does this contract auto-renew? If so, find the notice period in the contract text and calculate the opt-out deadline (expiration date minus notice period). Flag whether the deadline has already passed, is within 30 days, or is still manageable. A contract that auto-renews with an imminent opt-out deadline is the highest priority item on this list.
 

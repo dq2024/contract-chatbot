@@ -54,6 +54,22 @@ Format lists as markdown bullet points.
 Always cite which document(s) the information comes from.
 If the context doesn't contain enough information to answer, say so clearly."""
 
+CONSOLIDATE_PROMPT = """Identify vendor consolidation opportunities across active contracts (exclude any contracts where the expiration date has already passed). Look for two types of consolidation opportunity:
+
+Different contracts, similar services: Cases where two or more vendors hold separate contracts, different contract IDs, and appear to be providing similar or overlapping services. Use both the contract titles and the scope of work text to judge similarity; don't rely on titles alone since they are sometimes generic. Look especially for vendors serving multiple departments with similar scopes. Those cross-department relationships represent the strongest consolidation leverage.
+
+Same contract, multiple vendors: Cases where the same contract ID was awarded to more than one vendor, such as a JOC pool or a multi-vendor services contract. These are intentional at award time but represent an opportunity to reduce the vendor pool at renewal. For combined spend, sum the total contract value across all vendors under that contract ID individually. Do not use a single contract-level figure.
+
+For each opportunity identified, output a row in the following table:
+| Vendors | Contract ID(s) | Shared Service | Departments | Combined Spend | Earliest Expiry | Opportunity Type | Rationale |
+
+- Opportunity Type: "Multi-vendor contract" or "Fragmented spend"
+- Combined Spend: sum each vendor's individual highest contract value; note null for any hourly or unit-rate vendors where no fixed total exists
+- Earliest Expiry: the soonest natural exit or renegotiation window
+- Rationale: one sentence on what overlaps, which vendor is the preferred consolidation target, and why
+
+Rank rows by combined spend, highest first. Flag any rows where scope overlap is uncertain so the user can review manually before acting. If contract text is needed to confirm scope overlap, search it before reporting."""
+
 
 @st.cache_resource
 def get_clients():
@@ -363,28 +379,21 @@ def main():
         st.divider()
 
         if view == "💬 Chat":
+            st.markdown("### Quick Commands")
+            st.markdown("`/consolidate` identify vendor consolidation opportunities to save cost across active contracts")
+            if st.button("/consolidate", key="cmd_consolidate", use_container_width=True):
+                st.session_state["prefill"] = "/consolidate"
+
+            st.divider()
             st.markdown("### Example questions")
-            st.markdown("**Structured**")
-            sql_examples = [
+            examples = [
                 "Which contracts have the highest total value?",
                 "Which department has the most contracts?",
                 "List all contracts expiring in 2026.",
-                "Which contracts have hourly rates?",
-                "Show all modifications to contract 22046.",
-            ]
-            for ex in sql_examples:
-                if st.button(ex, key=ex, use_container_width=True):
-                    st.session_state["prefill"] = ex
-
-            st.markdown("**Content**")
-            rag_examples = [
-                "Do any contracts contain indemnification clauses?",
-                "What are the payment terms in the Motorola leases?",
-                "What does contract 23159 say about job order contracting?",
                 "Which contracts have termination for convenience clauses?",
                 "What are the insurance requirements in the Tyler Technologies agreement?",
             ]
-            for ex in rag_examples:
+            for ex in examples:
                 if st.button(ex, key=ex, use_container_width=True):
                     st.session_state["prefill"] = ex
 
@@ -411,7 +420,8 @@ def main():
 
             with st.chat_message("assistant"):
                 with st.spinner("Thinking..."):
-                    answer, sql, mode = handle_question(question, supabase, claude, embedder, st.session_state.messages)
+                    routed_question = CONSOLIDATE_PROMPT if question.strip().lower().startswith("/consolidate") else question
+                    answer, sql, mode = handle_question(routed_question, supabase, claude, embedder, st.session_state.messages)
                 st.markdown(answer)
                 if sql:
                     with st.expander(f"SQL · {mode.upper()}"):

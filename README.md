@@ -25,17 +25,20 @@ Sorted contract families by cumulative file size, smallest first, and selected 1
 
 | Field | Description |
 |---|---|
-| contract_id | e.g., "22046" |
-| contract_instance_id | contract_id + normalized vendor (primary key) |
-| vendor_name / vendor_name_normalized | original and lowercased |
+| contract_id | shared ID across all documents in a contract family, e.g., "22046" |
+| contract_instance_id | unique per row — contract_id combined with normalized vendor name |
+| vendor_name | vendor name as written in the document |
+| vendor_name_normalized | lowercased vendor name for deduplication and grouping |
 | contract_title | e.g., "Lake County Jail Inmate Food Service" |
 | document_type | Agreement, SOW, Modification, Renewal, Award, Lease, Other |
-| execution_date / effective_date / expiration_date | key dates |
-| total_contract_value_usd | null for unit-rate/hourly contracts |
-| hourly_rates | e.g., "$150/hr (Engineer)" |
-| auto_renewal_flag | boolean |
+| execution_date | date the contract was signed |
+| effective_date | date the contract period begins |
+| expiration_date | date the contract period ends |
+| total_contract_value_usd | total dollar amount of the contract; null for open-ended unit-rate contracts |
+| hourly_rates | rate schedule for T&M contracts, e.g., "$150/hr (Engineer)" |
+| auto_renewal_flag | true if the contract renews automatically without action from either party |
 | payment_terms | e.g., "Net 30 per IL Prompt Payment Act" |
-| internal_department | e.g., "Justice Division", "LCSO" |
+| internal_department | Lake County department responsible for the contract, e.g., "Justice Division", "LCSO" |
 
 A second-pass verification script (`src/verify_fields.py`) re-extracts fields most prone to error (auto_renewal_flag, internal_department, and null dates) using more targeted prompts to correct the initial extraction.
 
@@ -55,11 +58,11 @@ Chunking strategy (`src/chunk_and_embed.py`): splits on `##` section headers fir
 
 `app.py` is a Streamlit app with three-path retrieval:
 
-**SQL mode** — question can be answered from schema columns (dates, values, vendor names, flags). Claude generates a SELECT query, runs it via the RPC function, and formats the result.
+**SQL mode**: question can be answered from schema columns (dates, values, vendor names, flags). Claude generates a SELECT query, runs it via the RPC function, and formats the result.
 
-**RAG mode** — question asks about clause language or document content not captured in the schema. Embeds the question, retrieves top-15 chunks by cosine similarity, Claude answers from the chunks.
+**RAG mode**: question asks about clause language or document content not captured in the schema. Embeds the question, retrieves top-15 chunks by cosine similarity, Claude answers from the chunks.
 
-**Hybrid mode** — needs both. SQL first identifies the relevant documents by filename, then RAG is run filtered to only those documents to retrieve the specific clause text.
+**Hybrid mode**: needs both. SQL first identifies the relevant documents by filename, then RAG is run filtered to only those documents to retrieve the specific clause text.
 
 The router is a separate Claude call that returns structured JSON with the mode, SQL query if applicable, and a one-sentence reasoning. If the router fails to return valid JSON, the app falls back to RAG mode. The last 6 messages of conversation history are passed to the answer call so follow-up questions work correctly.
 
@@ -69,11 +72,11 @@ The router is a separate Claude call that returns structured JSON with the mode,
 
 Three eval scripts in `eval/`:
 
-**`run_eval.py`** — retrieval precision/recall/F1 against ground truth filenames for SQL and hybrid queries. Also computes chunk hit rate for RAG and hybrid cases: runs an unfiltered vector search and checks whether the expected documents appear in the top-15 results. If chunk hit rate is low while SQL F1 is high, the failure is in the embedding layer, not the query generation.
+**`run_eval.py`**: retrieval precision/recall/F1 against ground truth filenames for SQL and hybrid queries. Also computes chunk hit rate for RAG and hybrid cases: runs an unfiltered vector search and checks whether the expected documents appear in the top-15 results. If chunk hit rate is low while SQL F1 is high, the failure is in the embedding layer, not the query generation. Current scores: Overall F1 0.74  (6 cases scored), Avg chunk hit rate 0.79  (3 cases scored)
 
-**`ragas_eval.py`** — RAGAS faithfulness and answer relevancy on 5 RAG test cases using GPT-4o-mini as judge. Faithfulness measures whether the answer stays within the retrieved context; answer relevancy measures whether it addresses the question. Current scores: faithfulness 0.954, answer relevancy 0.871.
+**`ragas_eval.py`**: RAGAS faithfulness and answer relevancy on 5 RAG test cases using GPT-4o-mini as judge. Faithfulness measures whether the answer stays within the retrieved context; answer relevancy measures whether it addresses the question. Current scores: faithfulness 0.954, answer relevancy 0.871.
 
-**`llm_judge.py`** — LLM-as-a-judge scoring on 9 test cases across three dimensions (1-10 scale): factual correctness against ground truth, completeness (did it cover all relevant contracts), and citation quality (did it name specific documents). Uses GPT-5-mini as judge.
+**`llm_judge.py`**: LLM-as-a-judge scoring on 9 test cases across three dimensions (1-10 scale): factual correctness against ground truth, completeness (did it cover all relevant contracts), and citation quality (did it name specific documents). Uses GPT-5-mini as judge.
 
 ---
 
@@ -91,8 +94,10 @@ Three eval scripts in `eval/`:
 
 ## Top Improvements
 
-**1. Better embedding model.** Swap `all-MiniLM-L6-v2` for a larger or legal-domain model. This is the highest-leverage improvement. Retrieval quality directly caps answer quality, and the current model visibly struggles with clause-level queries. The chunk hit rate metric in the eval suite makes this easy to measure before and after.
+**Better embedding model.** Swap `all-MiniLM-L6-v2` for a larger or legal-domain model. This is the highest-leverage improvement. Retrieval quality directly caps answer quality, and the current model visibly struggles with clause-level queries. The chunk hit rate metric in the eval suite makes this easy to measure before and after.
 
-**2. Scheduled eval with alerting.** Run the eval suite on a daily/weekly cron job, store scores in a time series, and alert on drops below a threshold. This catches prompt drift when Anthropic updates Claude, and document format drift when the county starts uploading differently structured contracts.
+**Expand document coverage and improve extraction reliability.** The current 139-document scope is a proof of concept. A production system would need robust handling of documents without an ID in the filename, better extraction of multi-rate pricing structures, and a confidence score per extracted field so low-confidence values can be flagged for human review before entering the database.
 
-**3. Expand document coverage and improve extraction reliability.** The current 139-document scope is a proof of concept. A production system would need robust handling of documents without an ID in the filename, better extraction of multi-rate pricing structures, and a confidence score per extracted field so low-confidence values can be flagged for human review before entering the database.
+**Expand eval coverage.** The current eval suite covers a representative but limited set of queries. Adding more ground truth answers and more edge cases (ambiguous questions, cross-contract comparisons) would give a more complete and reliable signal on where the system succeeds and fails.
+
+**Scheduled eval with alerting.** Run the eval suite on a daily/weekly cron job, store scores in a time series, and alert on drops below a threshold. This catches prompt drift when Anthropic updates Claude, and document format drift when the county starts uploading differently structured contracts.

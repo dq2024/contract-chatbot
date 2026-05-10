@@ -69,7 +69,7 @@ def get_embedder():
 def route(claude: anthropic.Anthropic, question: str) -> dict:
     resp = claude.messages.create(
         model="claude-sonnet-4-6",
-        max_tokens=512,
+        max_tokens=1024,
         system=ROUTER_SYSTEM,
         messages=[{"role": "user", "content": question}],
     )
@@ -90,7 +90,7 @@ def run_sql(supabase, sql: str) -> list[dict]:
 
 def run_rag(supabase, embedder, question: str, filter_filenames: list[str] | None = None) -> list[dict]:
     embedding = embedder.encode(question).tolist()
-    params = {"query_embedding": embedding, "query_text": question, "match_count": 30}
+    params = {"query_embedding": embedding, "query_text": question, "match_count": 15}
     if filter_filenames:
         # In hybrid mode, restrict vector search to only the documents identified by SQL
         params["filter_filenames"] = filter_filenames
@@ -106,7 +106,7 @@ def format_answer(claude: anthropic.Anthropic, question: str, context: str, hist
     messages.append({"role": "user", "content": f"Question: {question}\n\nContext:\n{context}"})
     resp = claude.messages.create(
         model="claude-sonnet-4-6",
-        max_tokens=1024,
+        max_tokens=4096,
         system=ANSWER_SYSTEM,
         messages=messages,
     )
